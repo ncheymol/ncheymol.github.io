@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Accueil du Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #007acc;
+      --primary-light: #4fc3f7;
+      --accent: #e3f2fd;
+      --bg: #f9f9f9;
+      --bg-card: #fff;
+      --text: #222;
+      --text-light: #888;
+      --shadow: 0 2px 8px #0002;
+      --border: #e0e0e0;
+      --header-gradient: linear-gradient(90deg, #007acc 0%, #4fc3f7 100%);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #4fc3f7;
+        --primary-light: #007acc;
+        --accent: #263645;
+        --bg: #181c20;
+        --bg-card: #23272e;
+        --text: #f1f1f1;
+        --text-light: #b0b0b0;
+        --shadow: 0 2px 16px #0008;
+        --border: #2c313a;
+        --header-gradient: linear-gradient(90deg, #23272e 0%, #007acc 100%);
+      }
+    }
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 0 1.5rem 0;
+      background: var(--header-gradient);
+      color: var(--bg-card);
+      border-radius: 0 0 32px 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      animation: gradientMove 8s ease-in-out infinite alternate;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    header img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 4px solid var(--bg-card);
+      box-shadow: 0 2px 8px #0003;
+      background: var(--bg-card);
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    header img:hover {
+      transform: scale(1.07) rotate(-3deg);
+      box-shadow: 0 8px 32px #0004;
+    }
+    h1 {
+      color: var(--bg-card);
+      font-size: 2.3rem;
+      margin-bottom: 0.2em;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #0003;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    header p {
+      color: var(--bg-card);
+      margin: 0.3em 0;
+      font-size: 1.1em;
+      text-shadow: 0 1px 4px #0002;
+    }
+    header a {
+      color: #fff;
+      background: var(--primary);
+      padding: 0.4em 1em;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 8px #0002;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+      margin-top: 0.5em;
+    }
+    header a:hover {
+      background: #fff;
+      color: var(--primary);
+    }
+    .blog-list {
+      max-width: 850px;
+      margin: -2rem auto 0 auto;
+      padding: 0 1rem 2rem 1rem;
+      display: grid;
+      gap: 2rem;
+    }
+    .post {
+      background: var(--bg-card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: stretch;
+      gap: 1.5rem;
+      padding: 1.2rem 1.5rem;
+      border: 1px solid var(--border);
+      transition: transform 0.15s, box-shadow 0.15s, border 0.2s;
+      position: relative;
+      overflow: hidden;
+      animation: floatIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(40px) scale(0.97);}
+      to { opacity: 1; transform: translateY(0) scale(1);}
+    }
+    .post:hover {
+      transform: translateY(-4px) scale(1.015) rotate(-1deg);
+      box-shadow: 0 8px 32px #0003;
+      border-color: var(--primary);
+    }
+    .post-img {
+      width: 150px;
+      min-width: 120px;
+      max-width: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      height: 100%;
+      display: block;
+      background: var(--accent);
+      box-shadow: 0 2px 8px #0001;
+      flex-shrink: 0;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .post-img:hover {
+      box-shadow: 0 8px 32px #0003;
+      transform: scale(1.04) rotate(2deg);
+    }
+    .post-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+    }
+    .post-title {
+      margin: 0 0 0.2em 0;
+      color: var(--primary);
+      font-size: 1.3em;
+      font-weight: bold;
+      line-height: 1.2;
+      text-shadow: 0 1px 4px #0001;
+      transition: color 0.2s;
+    }
+    .post-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .post-title a:hover {
+      color: #ffb300;
+      text-decoration: underline;
+    }
+    .post-date {
+      color: var(--text-light);
+      font-size: 0.97em;
+      margin-bottom: 0.4em;
+    }
+    .post-desc {
+      margin-top: 0.3em;
+      font-size: 1.08em;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    @media (max-width: 700px) {
+      .blog-list {
+        gap: 1.2rem;
+      }
+      .post {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+      .post-img {
+        width: 100%;
+        max-width: 100%;
+        height: 180px;
+        margin-bottom: 0.7em;
+      }
+    }
+  </style>
+</head>
+<body>
+   <header>
+    <img src="https://media.licdn.com/dms/image/D4E03AQFv1wQ2bQwQxA/profile-displayphoto-shrink_200_200/0/1667483594532?e=1723680000&v=beta&t=9n8qk5Qn2b7pQw5kQw5kQw5kQw5kQw5kQw5kQw5kQw5k" alt="Nicolas Cheymol">
+    <h1>Nicolas Cheymol</h1>
+    <p>Architecte&nbsp;| Practice Leader&nbsp;| Expert Modern Workplace &amp; Sécurité&nbsp;| Formateur &amp; Conférencier</p>
+    <p>
+      <a href="https://www.linkedin.com/in/ncheymol/" target="_blank" rel="noopener">
+        Voir mon profil LinkedIn
+      </a>
+    </p>
+    <p>Retrouvez ici mes derniers articles, astuces et réflexions sur la gestion des périphériques ainsi que la sécurité et le cloud.</p>
+  </header>
+  <section class="blog-list">
+    <article class="post">
+      <img src="https://media.licdn.com/dms/image/v2/D5612AQFjIA9QU6IQgw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1732284784095?e=1755734400&v=beta&t=jQ3QMP3aXU1r6S8bKmuiqVcCIWofQZCFoz4GnnrJeGw" alt="Microsoft Tunnel sur Red Hat" class="post-img">
+      <div class="post-content">
+        <h2 class="post-title">
+          <a href="https://www.linkedin.com/pulse/installation-et-configuration-de-microsoft-tunnel-en-mode-cheymol-f7zrc" target="_blank" rel="noopener">
+            Installation et Configuration de Microsoft Tunnel en mode rootless sur Red Hat: Guide Pratique
+          </a>
+        </h2>
+        <div class="post-date">22 novembre 2024</div>
+        <div class="post-desc">Découvrez comment Installer et Configurer  Microsoft Tunnel en mode rootless sur Red Hat</div>
+      </div>
+    </article>
+    <article class="post">
+      <img src="https://media.licdn.com/dms/image/v2/D4E12AQGhJR-mBrK-tQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1730482347779?e=1755734400&v=beta&t=l6e3iWJanfN_9t_A63psG95HXQ_uW5-e8xKsmzsjSqw" alt="Microsoft Tunnel sur Red Hat" class="post-img">
+      <div class="post-content">
+        <h2 class="post-title">
+          <a href="https://www.linkedin.com/pulse/surveillance-de-windows-365-avec-powershell-nicolas-cheymol-fanwe" target="_blank" rel="noopener">
+            Surveillance de Windows 365 avec PowerShell
+          </a>
+        </h2>
+        <div class="post-date">1 novembre 2024</div>
+        <div class="post-desc">Apprenez à surveiller les evenements d'audit intune pour identifier la fin du provisioning des Cloud PC</div>
+      </div>
+    </article>
+    <!-- Ajoutez d'autres articles ici -->
+  </section>
+</body>
