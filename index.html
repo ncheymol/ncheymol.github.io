@@ -9,7 +9,31 @@
     header { text-align: center; margin-bottom: 2rem; }
     h1 { color: #333; }
     .blog-list { max-width: 700px; margin: 0 auto; }
-    .post { background: #fff; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 4px #0001; }
+    .post { 
+      background: #fff; 
+      padding: 1rem; 
+      margin-bottom: 1rem; 
+      border-radius: 8px; 
+      box-shadow: 0 2px 4px #0001; 
+      display: flex;
+      align-items: stretch;
+      gap: 1rem;
+    }
+    .post-img {
+      width: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+      height: 100%;
+      display: block;
+      background: #eee;
+      flex-shrink: 0;
+    }
+    .post-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     .post-title { margin: 0; color: #007acc; }
     .post-date { color: #888; font-size: 0.9em; }
     .post-desc { margin-top: 0.5em; }
@@ -22,14 +46,24 @@
   </header>
   <section class="blog-list">
     <article class="post">
-      <h2 class="post-title">Premier article de blog</h2>
-      <div class="post-date">18 juin 2025</div>
-      <div class="post-desc">Découvrez comment créer une page d’accueil de blog en HTML et CSS.</div>
+      <img src="https://media.licdn.com/dms/image/v2/D5612AQFjIA9QU6IQgw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1732284784095?e=1755734400&v=beta&t=jQ3QMP3aXU1r6S8bKmuiqVcCIWofQZCFoz4GnnrJeGw" alt="Microsoft Tunnel sur Red Hat" class="post-img">
+      <div class="post-content">
+        <h2 class="post-title">
+          <a href="https://www.linkedin.com/pulse/installation-et-configuration-de-microsoft-tunnel-en-mode-cheymol-f7zrc">
+            Installation et Configuration de Microsoft Tunnel en mode rootless sur Red Hat: Guide Pratique
+          </a>
+        </h2>
+        <div class="post-date">22 novembre 2024</div>
+        <div class="post-desc">Découvrez comment Installer et Configurer  Microsoft Tunnel en mode rootless sur Red Hat</div>
+      </div>
     </article>
     <article class="post">
-      <h2 class="post-title">Astuces JavaScript</h2>
-      <div class="post-date">15 juin 2025</div>
-      <div class="post-desc">Quelques astuces pratiques pour améliorer vos scripts JavaScript.</div>
+      <img src="images/js-astuces.jpg" alt="Astuces JavaScript" class="post-img">
+      <div class="post-content">
+        <h2 class="post-title">Astuces JavaScript</h2>
+        <div class="post-date">15 juin 2025</div>
+        <div class="post-desc">Quelques astuces pratiques pour améliorer vos scripts JavaScript.</div>
+      </div>
     </article>
     <!-- Ajoutez d'autres articles ici -->
   </section>
