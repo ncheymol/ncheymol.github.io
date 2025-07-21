@@ -8,7 +8,6 @@
   <meta name="keywords" content="{{ site.keywords }}">
   <meta name="author" content="{{ site.author }}">
   <style>
-    /* Copie intégrale du style de index.html */
     :root {
       --primary: #007acc;
       --primary-light: #4fc3f7;
@@ -141,6 +140,18 @@
       from { opacity: 0; transform: translateY(40px) scale(0.97);}
       to { opacity: 1; transform: translateY(0) scale(1);}
     }
+    .banner {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.7em 1em;
+      border-radius: 10px 10px 0 0;
+      margin-bottom: 1.2em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 1.1em;
+      box-shadow: 0 2px 8px #0002;
+      text-align: center;
+    }
     .post-title {
       margin: 0 0 0.2em 0;
       color: var(--primary);
@@ -227,11 +238,14 @@
         <a href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener">
           Flux RSS du blog
         </a>
-        </p>
+      </p>
       <p>Retrouvez ici mes derniers articles, astuces et réflexions sur la gestion des périphériques ainsi que la sécurité et le cloud.</p>
     </aside>
     <main>
       <section class="post-single">
+        <div class="banner">
+          {{ page.banner | default: "" }}
+        </div>
         <h1 class="post-title">{{ page.title }}</h1>
         <div class="post-date">Publié le {{ page.date | date: "%d %B %Y" }}</div>
         <div class="post-content">
