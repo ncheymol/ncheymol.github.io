@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Learn how to optimize your costs with Windows 365 Frontline Shared"
-banner : <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/1d4019d4-b607-42cc-ae64-96d1e94e0a3f" />
+banner: "https://media.licdn.com/dms/image/v2/D4E12AQG2zwcqGixMUg/article-cover_image-shrink_720_1280/B4EZedjeyIHsAI-/0/1750695014446?e=1756339200&v=beta&t=qRQMVsd1EjQNodaqJLBlRUXUo0AL_uNIsjiKJ3YrZXI"
 date:   2025-06-23 21:00:00 +0200
 categories: W365
 ---
@@ -18,7 +18,7 @@ This setting does not apply to Windows 365 Frontline Shared machines
 
 # Device Preparation group
 Create the group to which apps and policies will be deployed
-![alt text](image.png)
+![](2025-07-21-17-08-29.png)
 
 Contenu de l’article
 Add Intune Provisioning Client as an owner

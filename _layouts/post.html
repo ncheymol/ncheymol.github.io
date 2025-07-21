@@ -244,8 +244,12 @@
     <main>
       <section class="post-single">
         <div class="banner">
-          {{ page.banner | default: "" }}
-        </div>
+          {% if page.banner %}
+            <img src="{{ page.banner }}" alt="Bannière" style="max-width:100%;height:auto;border-radius:8px;">
+          {% else %}
+            Nouvel article sur le blog
+          {% endif %}
+        </div>        
         <h1 class="post-title">{{ page.title }}</h1>
         <div class="post-date">Publié le {{ page.date | date: "%d %B %Y" }}</div>
         <div class="post-content">
