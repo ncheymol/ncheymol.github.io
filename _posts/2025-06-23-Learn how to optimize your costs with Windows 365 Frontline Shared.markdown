@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Learn how to optimize your costs with Windows 365 Frontline Shared"
-banner : <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/1d4019d4-b607-42cc-ae64-96d1e94e0a3f" />
+banner : "https://media.licdn.com/dms/image/v2/D4E12AQEnUCnuhGwyDg/article-cover_image-shrink_720_1280/B4EZedylSDHYAI-/0/1750698972601?e=1758758400&v=beta&t=tr1hsSx5x-4bpk0c-SUCQAP9xgAHZABYgk7goq8_o_Y"
 date:   2025-06-23 21:00:00 +0200
 categories: W365
 ---
