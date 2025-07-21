@@ -19,6 +19,8 @@ This setting does not apply to Windows 365 Frontline Shared machines
 # Device Preparation group
 Create the group to which apps and policies will be deployed
 ![alt text](image.png)
+<img width="923" height="668" alt="image" src="https://github.com/user-attachments/assets/83d86c02-3000-4b73-8de1-dc09588658c7" />
+
 
 Contenu de l’article
 Add Intune Provisioning Client as an owner
