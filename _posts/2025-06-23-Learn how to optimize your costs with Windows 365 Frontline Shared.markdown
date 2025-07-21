@@ -1,9 +1,12 @@
 ---
 layout: post
 title:  "Learn how to optimize your costs with Windows 365 Frontline Shared"
+banner : <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/1d4019d4-b607-42cc-ae64-96d1e94e0a3f" />
 date:   2025-06-23 21:00:00 +0200
 categories: W365
 ---
+
+
  Windows 365 Frontline Shared is a new solution that expands Microsoft's DaaS offering. It provides a temporary virtual machine to users, thus optimizing the cost of Windows 365 for those who do not work on it full-time.
 
 This blog post will explain how to set up W365 Frontline Shared within your organization, detailing each step of the process.
