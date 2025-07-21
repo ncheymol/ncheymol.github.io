@@ -26,12 +26,12 @@ Add Intune Provisioning Client as an owner
 # Device Preparation Policy 
 In order to install the apps, apply the configs when provisioning the machine, it is necessary to create a device preparation policy.
 
-1.      Go to Devices > Windows > Enrollment
+1.      Go to Devices > Windows > **Enrollment**
+![](../2025-07-21-18-50-17.png)
 
-Contenu de l’article
 2.      Select Device Preparation Policy
+![](../2025-07-21-18-52-16.png)
 
-Contenu de l’article
 3.      Click Create > Automatic
 
 Contenu de l’article
