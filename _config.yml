@@ -26,7 +26,7 @@ baseurl: "" # le sous-répertoire de votre site, ex: /blog
 url: "https://ncheymol.github.io" # l’URL de base de votre site
 linkedin_username: ncheymol
 github_username: ncheymol
-author: Nicolas Cheymol
+author: Nicolas CHEYMOL
 keywords: blog, projets, Intune, Could PC, Windows 365, Modern Management 
 
 # Build settings
