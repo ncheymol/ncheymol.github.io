@@ -41,139 +41,135 @@ In order to install the apps, apply the configs when provisioning the machine, i
 
 6.      Click **Next**
 
-7.      Select the group you created earlier
+7.      Select the **group** you created earlier
 ![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/7.png?raw=true)
 
-8.      Click Next
+8.      Click **Next**
 
-9.      Click Add to select the apps and scripts to be applied during provisioning
+9.      Click **Add** to select the apps and scripts to be applied during provisioning
 ![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/8.png?raw=true)
 
-10.      Click Add  for each
+10.      Click **Add**  for each
 ![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/9.png?raw=true)
 Note: Store applications must be in system context otherwise they are not installed during provisioning
-11.      Click Save  > Next
+11.      Click Save  > **Next**
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/10.png?raw=true)
 
-Contenu de l’article
-12.      Click Next
+12.      Click **Next**
 
-13. Check that everything is good
+13. **Check** that everything is good
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/11.png?raw=true)
 
-Contenu de l’article
-14.      Click Save
+14.      Click **Save**
 
-/!\ Don 't forget to assign applications and scripts to the group, adding to the Preparation Policy only defines what needs to be followed.
+**/!\ ** Don 't forget to assign applications and scripts to the group, adding to the Preparation Policy only defines what needs to be followed.
 
 # Create Provisioning Profile
-Now all that's left to do is create the machine provisioning policy, go to Intune > Devices > Windows 356 > Provisioning Policies
+Now all that's left to do is create the machine provisioning policy, go to Intune > Devices > Windows 356 > **Provisioning Policies**
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/12.png?raw=true)
 
-Contenu de l’article
-1.      Cliquer sur Create Policy
+1.      Cliquer sur **Create Policy**
 
 2.      Enter a Name
 
-3.      Select Frontline > Shared > Microsoft entered Joined
+3.      Select **Frontline > Shared > Microsoft entered Joined**
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/13.png?raw=true)
 
-Contenu de l’article
-4.      Select Microsoft Hosted Network and the desired region
+4.      Select **Microsoft Hosted Network** and the **desired region**
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/14.png?raw=true)
 
-Contenu de l’article
-5.      Check Single Sign On and then Click Next
+5.      Check **Single Sign On** and then Click Next
 
 6.      Select the image to use
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/15.png?raw=true)
 
-Contenu de l’article
-7.      Click Next
+7.      Click **Next**
 
-8.      Choose the language and configure the  machine name template
+8.      Choose the **language** and configure the  **machine name** template
 
-/! \ it is not possible to have a – somewhere other than at the end of the prefix
+**/! \ ** it is not possible to have a – somewhere other than at the end of the prefix
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/16.png?raw=true)
 
-Contenu de l’article
-/!\ The name must be exactly 15 characters long
+**/!\ ** The name must be exactly 15 characters long
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/17.png?raw=true)
 
-Contenu de l’article
-/! \ the prefix must be a maximum of 7 characters
+**/! \ ** the prefix must be a maximum of 7 characters
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/18.png?raw=true)
 
-Contenu de l’article
-9.      Then select the readiness policy, the time allotted and whether the user can log in in case of failure
+9.      Then **select** the **readiness policy**, the time allotted and whether the **user can log in in case of failure**
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/19.png?raw=true)
 
-Contenu de l’article
-10.      Click Next
+10.      Click **Next**
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/20.png?raw=true)
 
-Contenu de l’article
-11.      Click Next
+11.      Click **Next**
 
-12. Select User Group
+12. **Select** User Group
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/21.png?raw=true)
 
-Contenu de l’article
-13.      Click Select  > Next
 
-14.      Select the  CPC size, assignment name,  and number
+13.      Click Select  > **Next**
 
-Contenu de l’article
-15.      Click Select  > Next
+14.      Select the  CPC **size**, **assignment name**, and **number**
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/22.png?raw=true)
 
-Contenu de l’article
-16.      Check that everything is correct and then click Create
+15.      Click Select  > **Next**
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/23.png?raw=true)
+
+16.      Check that everything is correct and then click **Create**
 
 
 
 # Provisioning du Cloud PC
 You can now go to All Cloud PCs and see that provisioning is in progress
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/24.png?raw=true)
 
-Contenu de l’article
-Provisioning can take a little over an hour, so be patient.
+Provisioning can take a little over **an hour**, so be patient.
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/25.png?raw=true)
 
-Contenu de l’article
-The machine is ready, all that's left to do is connect
+The machine is ready, all that's left to do is **connect**
 
 # 1st connexion
 1.      Go to https://windows.cloud.microsoft
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/26
+.png?raw=true)
 
-Contenu de l’article
-2.      Click on connect
+2.      Click on **connect**
 
  Below you will find the different connection steps which are the same as for an Enterprise or Frontline Dedicated CPC
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/27.png?raw=true)
 
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/28.png?raw=true)
+The machine is **ready** to use
 
+**/!\ ** It 's a temporary machine, make users aware of how to store their documents on OneDrive
 
-Contenu de l’article
+/!\ ** Any file created or modified in the profile will be lost
 
-
-Contenu de l’article
-The machine is ready to use
-
-/!\ It 's a temporary machine, make users aware of how to store their documents on OneDrive
-
-/!\ Any file created or modified in the profile will be lost
-
-/!\ Any application installed outside of the Device Preparation Policy will no longer be present at the next connection
+**/!\ ** Any application installed outside of the Device Preparation Policy will no longer be present at the next connection
 
 Note: the modified files in some sections of the disk are maintained, it may be interesting to hide the C to prevent a user from storing personal data that would be accessible by a person who is not authorized to see them
 
 # Reporting
 As the number of simultaneous connections is limited to the number of machines provisioned, it is important to be able to track usage and disconnect a user if necessary
 
-Go to Intune > Reports
+Go to Intune > **Reports**
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/29.png?raw=true)
 
-Contenu de l’article
-Select Connected Frontline Cloud
+Select **Connected Frontline Cloud**
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/30.png?raw=true)
 
-Contenu de l’article
-Here we can see that a provisioning profile has reached its limit
+Here we can see that a provisioning profile has reached its **limit**
 
-You can click on it to find out more
+You can **click** on it to find out more
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/31.png?raw=true)
 
-Contenu de l’article
 Here we see that the limit has been waited 2 times during a month
 
-To find out who is logged in, click Connect
+To find out who is logged in, click **Connect**
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/32.png?raw=true)
 
-
-
-Contenu de l’article
-If you want to disconnect one or more users is simple, select the CPCs, click on Bulk device action > Restart
+If you want to disconnect one or more users is simple, **select** the CPCs, click on **Bulk device action > Restart**
 
 
 
@@ -182,7 +178,8 @@ Contenu de l’article
 During my tests I encountered a bug, my machine got stuck during provisioning, adding a machine to the profile unlocked it (failed)
 
 What's strange is that the image change was not taken into account even though it was done before adding a 2nd machine.
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/33.png?raw=true)
 
-Contenu de l’article
-Contenu de l’article
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/34.png?raw=true)
+
 Reprovisioning the two machines solved everything
