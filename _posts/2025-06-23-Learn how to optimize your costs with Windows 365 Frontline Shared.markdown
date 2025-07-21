@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Learn how to optimize your costs with Windows 365 Frontline Shared"
-banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/1.png"
+banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/1.jpg?raw=true"
 date:   2025-06-23 21:00:00 +0200
 categories: W365
 ---
@@ -18,7 +18,7 @@ This setting does not apply to Windows 365 Frontline Shared machines
 
 # Device Preparation group
 Create the group to which apps and policies will be deployed
-![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/2.png)
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/2.png?raw=true)
 
 Add Intune Provisioning Client as an owner
 
@@ -26,31 +26,31 @@ Add Intune Provisioning Client as an owner
 In order to install the apps, apply the configs when provisioning the machine, it is necessary to create a device preparation policy.
 
 1.      Go to Devices > Windows > **Enrollment**
-![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/3.png)
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/3.png?raw=true)
 
 2.      Select **Device Preparation Policy**
-![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/4.png)
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/4.png?raw=true)
 
 3.      Click **Create > Automatic**
-![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/5.png)
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/5.png?raw=true)
 
 4.      Click **Next**
 
 5.      Choose a **name**
-![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/6.png)
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/6.png?raw=true)
 
 6.      Click **Next**
 
 7.      Select the group you created earlier
-![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/7.png)
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/7.png?raw=true)
 
 8.      Click Next
 
 9.      Click Add to select the apps and scripts to be applied during provisioning
-![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/8.png)
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/8.png?raw=true)
 
 10.      Click Add  for each
-![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/9.png)
+![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/9.png?raw=true)
 Note: Store applications must be in system context otherwise they are not installed during provisioning
 11.      Click Save  > Next
 
