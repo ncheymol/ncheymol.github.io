@@ -213,6 +213,40 @@
     .container aside {
       transition: width 0.3s, min-width 0.3s, max-width 0.3s, padding 0.3s;
     }
+    pre {
+      background: var(--accent);
+      color: var(--text);
+      border: 1.5px solid var(--primary-light);
+      border-radius: 8px;
+      padding: 0.7em 1em;
+      font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
+      font-size: 0.98em;
+      overflow-x: auto;
+      box-shadow: 0 2px 8px #0001;
+      margin: 1.2em 0;
+      display: block;
+    }
+    code {
+      background: none;
+      color: var(--primary);
+      border: none;
+      border-radius: 4px;
+      padding: 0.15em 0.4em;
+      font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
+      font-size: 0.97em;
+      display: inline;
+    }
+    @media (prefers-color-scheme: dark) {
+      pre {
+        background: var(--accent);
+        color: var(--text);
+        border: 1.5px solid var(--primary-light);
+        box-shadow: 0 2px 16px #0004;
+      }
+      code {
+        color: var(--primary-light);
+      }
+    }
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
