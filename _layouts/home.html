@@ -55,7 +55,7 @@
       width: 320px;
       min-width: 240px;
       max-width: 400px;
-      background: var(--header-gradient);
+      background: var(--primary); /* Remplace le dégradé par une couleur unie */
       color: var(--bg-card);
       display: flex;
       flex-direction: column;
@@ -103,7 +103,7 @@
     }
     aside a {
       color: #fff;
-      background: var(--primary);
+      background: var(--primary-light);
       padding: 0.3em 0.8em;
       border-radius: 20px;
       text-decoration: none;
@@ -293,6 +293,15 @@
       <p>Retrouvez ici mes derniers articles, astuces et réflexions sur la gestion des périphériques ainsi que la sécurité et le cloud.</p>
     </aside>
     <main>
+      <div style="max-width:850px;margin:0 auto 2rem auto;padding:0 1rem;">
+        <label for="searchInput" style="display:none;">Recherche</label>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Rechercher un article..."
+          style="width:100%;padding:0.7em 1em;font-size:1.1em;border-radius:8px;border:1px solid var(--border);box-shadow:0 2px 8px #0001;margin-bottom:1.5em;"
+        />
+      </div>
       <section class="blog-list">
         {% for post in site.posts %}
         <article class="post">
@@ -313,5 +322,24 @@
       </section>
     </main>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('searchInput');
+      const posts = document.querySelectorAll('.blog-list .post');
+
+      searchInput.addEventListener('input', function() {
+        const query = this.value.toLowerCase();
+        posts.forEach(post => {
+          const title = post.querySelector('.post-title').innerText.toLowerCase();
+          const desc = post.querySelector('.post-desc') ? post.querySelector('.post-desc').innerText.toLowerCase() : '';
+          if (title.includes(query) || desc.includes(query)) {
+            post.style.display = '';
+          } else {
+            post.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
