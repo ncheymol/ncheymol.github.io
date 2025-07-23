@@ -343,7 +343,7 @@
       <section class="blog-list">
         {% for post in site.posts %}
         <article class="post" data-lang="{{ post.lang | default: 'fr' }}">
-          {% if post.banner %}
+          {% if post.banner and post.banner != '' %}
             <img src="{{ post.banner }}" alt="Bannière" class="post-img">
           {% endif %}
           <div class="post-content">

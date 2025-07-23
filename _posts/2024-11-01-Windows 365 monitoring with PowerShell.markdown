@@ -7,15 +7,11 @@ categories: W365
 lang: en
 ---
 
-# Windows 365 Monitoring with PowerShell
-
-*Article en Français : Surveillance de Windows 365 avec PowerShell*
-
----
 
 ## Introduction
-
 This article presents a **PowerShell tool** designed to monitor on-premises connections and audit events for Windows 365. We will explain its utility, functionality, and the necessary prerequisites.
+
+Article en Français : [lien](https://ncheymol.github.io/w365/2024/11/01/Surveillance-de-Windows-365-avec-PowerShell.html)
 
 ---
 

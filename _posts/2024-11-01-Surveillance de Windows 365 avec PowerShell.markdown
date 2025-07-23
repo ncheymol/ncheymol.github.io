@@ -11,7 +11,7 @@ lang: fr
 # Introduction
 Cet article présente un **outil PowerShell** conçu pour surveiller les connexions sur site et les événements d'audit de Windows 365. Nous expliquerons son utilité, son fonctionnement, et les prérequis nécessaires.
 
-Article in English : ![lien](./Windows 365 monitoring with PowerShell)
+Article in English : [lien](https://ncheymol.github.io/w365/2024/11/01/Windows-365-monitoring-with-PowerShell.html)
 
 ---
 
