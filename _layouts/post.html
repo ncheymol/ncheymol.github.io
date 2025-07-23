@@ -286,6 +286,47 @@
         margin-bottom: 0.7rem;
       }
     }
+    /* Bouton copier pour les blocs de code */
+    .pre-copy-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary-light);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 0.12em 0.45em;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #0002;
+      transition: background 0.2s;
+      z-index: 5;
+      width: 1.8em;
+      height: 1.8em;
+      margin-bottom: 0.1em;
+      margin-top: 0.1em;
+      margin-right: 0.1em;
+    }
+    .pre-copy-btn svg {
+      width: 1em;
+      height: 1em;
+      display: block;
+      pointer-events: none;
+    }
+    .pre-copy-btn.copied {
+      background: var(--primary);
+    }
+    .pre-copy-btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      margin-bottom: -0.2em;
+    }
+    .pre-block {
+      position: relative;
+      margin-top: 0;
+    }
   </style>
   {% include analytics.html %}
 </head>
@@ -343,5 +384,28 @@
       </section>
     </main>
   </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll("pre").forEach(function(pre) {
+    pre.classList.add("pre-block");
+    var wrapper = document.createElement("div");
+    wrapper.className = "pre-copy-btn-wrapper";
+    var btn = document.createElement("button");
+    btn.className = "pre-copy-btn";
+    btn.title = "Copier le code";
+    btn.innerHTML = `<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='9' width='13' height='13' rx='2' ry='2'></rect><path d='M5 15V5a2 2 0 0 1 2-2h10'></path></svg>`;
+    btn.onclick = function() {
+      var code = pre.querySelector("code");
+      var text = code ? code.innerText : pre.innerText;
+      navigator.clipboard.writeText(text).then(function() {
+        btn.classList.add("copied");
+        setTimeout(function() { btn.classList.remove("copied"); }, 1200);
+      });
+    };
+    wrapper.appendChild(btn);
+    pre.parentNode.insertBefore(wrapper, pre);
+  });
+});
+</script>
 </body>
 </html>
