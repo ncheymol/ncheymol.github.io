@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Installation et Configuration de Microsoft Tunnel en mode rootless sur Red Hat: Guide Pratique"
-banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/tunnel/banner.jpg?raw=true"
+banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/tunnel/banner.png?raw=true"
 date:   2025-06-23 21:00:00 +0200
 categories: Intune
 lang: fr
