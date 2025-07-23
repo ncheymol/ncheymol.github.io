@@ -3,7 +3,7 @@ layout: post
 title:  "Hibernation pour Azure Virtual Desktop est désormais disponible"
 banner : ""
 date:   2024-05-31 21:00:00 +0200
-categories: AVD
+tags: AVD
 lang: fr
 ---
 

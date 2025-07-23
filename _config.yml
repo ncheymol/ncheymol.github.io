@@ -27,7 +27,7 @@ url: "https://ncheymol.github.io" # l’URL de base de votre site
 linkedin_username: ncheymol
 github_username: ncheymol
 author: Nicolas CHEYMOL
-keywords: blog, projets, Intune, Could PC, Windows 365, Modern Management 
+keywords: blog, projets, Intune, Could PC, Windows 365, Modern Management, ConfigMgr, PowerShell
 
 # Build settings
 theme: minima

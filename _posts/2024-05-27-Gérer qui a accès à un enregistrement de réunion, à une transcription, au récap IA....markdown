@@ -3,7 +3,7 @@ layout: post
 title:  "Gérer qui a accès à un enregistrement de réunion, à une transcription, au récap IA..."
 banner : ""
 date:   2024-05-31 21:00:00 +0200
-categories: Copilot
+tags: Copilot
 lang: fr
 ---
 

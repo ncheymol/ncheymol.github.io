@@ -237,6 +237,24 @@
       border-color: var(--primary);
       box-shadow: 0 0 0 2px var(--primary-light);
     }
+    #tagSelect {
+      padding: 0.6em 1.2em 0.6em 0.8em;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text);
+      font-size: 1.05em;
+      box-shadow: 0 2px 8px #0001;
+      transition: border 0.2s, box-shadow 0.2s;
+      outline: none;
+      margin: 0;
+      appearance: none;
+      cursor: pointer;
+    }
+    #tagSelect:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px var(--primary-light);
+    }
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
@@ -333,6 +351,24 @@
           <option value="fr">Français</option>
           <option value="en">English</option>
         </select>
+        <div class="dropdown-multiselect" id="tagDropdown" style="position:relative; margin-left:0.7em; min-width:180px;">
+          <button type="button" id="tagDropdownBtn" style="width:100%;padding:0.6em 1.2em 0.6em 0.8em;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text);font-size:1.05em;box-shadow:0 2px 8px #0001;transition:border 0.2s, box-shadow 0.2s;outline:none;cursor:pointer;text-align:left;">
+            Tous les tags
+          </button>
+          <div id="tagDropdownMenu" style="display:none;position:absolute;z-index:10;top:110%;left:0;width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;box-shadow:0 4px 16px #0002;padding:0.5em 0;max-height:220px;overflow-y:auto;">
+            <label style="display:block;padding:0.3em 1em;cursor:pointer;">
+              <input type="checkbox" class="tag-checkbox" value="all" checked> Tous les tags
+            </label>
+            {% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq | sort %}
+            {% for tag in all_tags %}
+              {% unless tag == "" %}
+                <label style="display:block;padding:0.3em 1em;cursor:pointer;">
+                  <input type="checkbox" class="tag-checkbox" value="{{ tag | strip }}"> {{ tag | strip }}
+                </label>
+              {% endunless %}
+            {% endfor %}
+          </div>
+        </div>
         <input
           type="text"
           id="searchInput"
@@ -342,7 +378,7 @@
       </div>
       <section class="blog-list">
         {% for post in site.posts %}
-        <article class="post" data-lang="{{ post.lang | default: 'fr' }}">
+        <article class="post" data-lang="{{ post.lang | default: 'fr' }}" data-tags="{{ post.tags | join: ',' }}">
           {% if post.banner and post.banner != '' %}
             <img src="{{ post.banner }}" alt="Bannière" class="post-img">
           {% endif %}
@@ -366,23 +402,75 @@
       const langSelect = document.getElementById('langSelect');
       const posts = document.querySelectorAll('.blog-list .post');
 
+      // Dropdown multiselect logic
+      const tagDropdownBtn = document.getElementById('tagDropdownBtn');
+      const tagDropdownMenu = document.getElementById('tagDropdownMenu');
+      const tagCheckboxes = tagDropdownMenu.querySelectorAll('.tag-checkbox');
+      let selectedTags = ['all'];
+
+      // Ouvre/ferme le menu
+      tagDropdownBtn.addEventListener('click', function(e) {
+        tagDropdownMenu.style.display = tagDropdownMenu.style.display === 'block' ? 'none' : 'block';
+      });
+      // Ferme le menu si clic en dehors
+      document.addEventListener('click', function(e) {
+        if (!document.getElementById('tagDropdown').contains(e.target)) {
+          tagDropdownMenu.style.display = 'none';
+        }
+      });
+      // Gestion de la sélection
+      tagDropdownMenu.addEventListener('change', function(e) {
+        if (e.target.value === 'all') {
+          if (e.target.checked) {
+            tagCheckboxes.forEach(cb => { if (cb.value !== 'all') cb.checked = false; });
+            selectedTags = ['all'];
+          } else {
+            // Empêche de décocher "Tous les tags" si rien d'autre n'est coché
+            if ([...tagCheckboxes].filter(cb => cb.value !== 'all' && cb.checked).length === 0) {
+              e.target.checked = true;
+              selectedTags = ['all'];
+            }
+          }
+        } else {
+          const checkedTags = [...tagCheckboxes].filter(cb => cb.value !== 'all' && cb.checked).map(cb => cb.value);
+          if (checkedTags.length > 0) {
+            tagCheckboxes.forEach(cb => { if (cb.value === 'all') cb.checked = false; });
+            selectedTags = checkedTags;
+          } else {
+            tagCheckboxes.forEach(cb => { if (cb.value === 'all') cb.checked = true; });
+            selectedTags = ['all'];
+          }
+        }
+        updateTagDropdownBtn();
+        filterPosts();
+      });
+      function updateTagDropdownBtn() {
+        if (selectedTags.includes('all')) {
+          tagDropdownBtn.textContent = 'Tous les tags';
+        } else {
+          tagDropdownBtn.textContent = selectedTags.join(', ');
+        }
+      }
+
       function filterPosts() {
         const query = searchInput.value.toLowerCase();
         const selectedLang = langSelect.value;
+        const allSelected = selectedTags.includes('all') || selectedTags.length === 0;
         posts.forEach(post => {
           const title = post.querySelector('.post-title').innerText.toLowerCase();
           const desc = post.querySelector('.post-desc') ? post.querySelector('.post-desc').innerText.toLowerCase() : '';
           const lang = post.getAttribute('data-lang') || 'fr';
+          const tags = (post.getAttribute('data-tags') || '').split(',');
           const matchesLang = (selectedLang === 'all' || lang === selectedLang);
           const matchesQuery = (title.includes(query) || desc.includes(query));
-          if (matchesLang && matchesQuery) {
+          const matchesTag = allSelected || selectedTags.some(tag => tags.includes(tag));
+          if (matchesLang && matchesQuery && matchesTag) {
             post.style.display = '';
           } else {
             post.style.display = 'none';
           }
         });
       }
-
       searchInput.addEventListener('input', filterPosts);
       langSelect.addEventListener('change', filterPosts);
     });

@@ -3,7 +3,7 @@ layout: post
 title:  "Learn how to optimize your costs with Windows 365 Frontline Shared"
 banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/1.jpg?raw=true"
 date:   2025-06-23 21:00:00 +0200
-categories: W365
+tags: W365
 lang: en
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Avis d’expert – Comment adopter une stratégie Anywhere Anytime Anydevice, tout en assurant la conformité et la sécurité des données"
 date:   2020-09-11 21:00:00 +0200
-categories: W365
+tags: W365
 lang: fr
 ---
 Nous avons demandé à Nicolas Cheymol, Enterprise Solution Architect et Practice Leader
