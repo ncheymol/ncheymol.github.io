@@ -33,6 +33,7 @@ keywords: blog, projets, Intune, Could PC, Windows 365, Modern Management, Confi
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 google_analytics:
   id: "G-GK9X2TK4W9"
