@@ -388,7 +388,7 @@
             </h2>
             <div class="post-date">{{ post.date | date: "%d %B %Y" }}</div>
             {% if post.excerpt %}
-              <div class="post-desc">{{ post.excerpt | strip_html | truncate: 180 }}</div>
+              <div class="post-desc">{{ post.description | strip_html | truncate: 180 }}</div>
             {% endif %}
           </div>
         </article>

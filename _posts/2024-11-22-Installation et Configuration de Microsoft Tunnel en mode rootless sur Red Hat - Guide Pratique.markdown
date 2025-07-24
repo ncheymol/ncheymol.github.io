@@ -5,6 +5,8 @@ banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/tunn
 date:   2025-06-23 21:00:00 +0200
 tags: Intune
 lang: fr
+description: >-
+  Guide pratique pour installer et configurer Microsoft Tunnel en mode rootless sur Red Hat. Étapes détaillées, prérequis, scripts et conseils pour une intégration réussie.
 ---
 
 # Introduction
@@ -344,3 +346,8 @@ Pour configurer une politique de configuration d'application pour activer unique
 Mstunnel comprend son propre service de monitoring `mstunnel_monitor` qui redémarre les conteneurs en cas de problème.
 
 Le conteneur **Agent** pilote les mises à jour, la surveillance de la configuration et le reporting auprès d’Intune. Le conteneur **Server** réceptionne les connexions des clients.
+
+# Articles connexes
+
+- [Surveillance de Windows 365 avec PowerShell](/2024/11/01/Surveillance-de-Windows-365-avec-PowerShell.html)
+- [Découvrez comment optimiser vos coûts avec Windows 365 Frontline Shared](/2025/06/23/D%C3%A9couvrez-comment-optimiser-vos-co%C3%BBts-avec-Windows-365-Frontline-Shared.html)

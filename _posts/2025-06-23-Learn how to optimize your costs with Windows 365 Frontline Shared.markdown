@@ -5,6 +5,8 @@ banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365
 date:   2025-06-23 21:00:00 +0200
 tags: W365
 lang: en
+description: >-
+  Learn about the benefits, limitations, and steps to optimize costs with Windows 365 Frontline Shared. Complete tutorial for businesses and IT professionals.
 ---
 
 
@@ -184,3 +186,9 @@ What's strange is that the image change was not taken into account even though i
 ![](https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/34.png?raw=true)
 
 Reprovisioning the two machines solved everything
+
+# Related articles
+
+- [Windows 365 monitoring with PowerShell](/2024/11/01/Windows-365-monitoring-with-PowerShell.html)
+- [Proactive Monitoring of Intune and Windows 365 with PowerShell and Microsoft Graph](/2025/07/29/Proactive-Monitoring-of-Intune-and-Windows-365-with-PowerShell-and-Microsoft-Graph.html)
+- [Installation et Configuration de Microsoft Tunnel en mode rootless sur Red Hat: Guide Pratique](/2024/11/22/Installation-et-Configuration-de-Microsoft-Tunnel-en-mode-rootless-sur-Red-Hat-Guide-Pratique.html)

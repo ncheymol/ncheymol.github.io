@@ -4,4 +4,6 @@
 
 layout: home
 title: Accueil
+description: >-
+  Bienvenue sur le site de Nicolas CHEYMOL, expert Modern Endpoint, sécurité et cloud. Découvrez des articles, guides et ressources sur Intune, Windows 365, PowerShell et la gestion des environnements Microsoft.
 ---

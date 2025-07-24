@@ -5,6 +5,8 @@ banner : ""
 date:   2024-05-31 21:00:00 +0200
 tags: Copilot
 lang: fr
+description: >-
+  Contrôlez l'accès aux enregistrements, transcriptions et récapitulatifs IA dans Microsoft Teams. Découvrez les nouvelles options de sécurité et de partage pour vos réunions.
 ---
 
 # Microsoft Teams : contrôlez l'accès à vos réunions enregistrées avec Copilot

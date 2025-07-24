@@ -4,6 +4,8 @@ title: "Avis d’expert – Comment adopter une stratégie Anywhere Anytime Anyd
 date:   2020-09-11 21:00:00 +0200
 tags: W365
 lang: fr
+description: >-
+  Découvrez comment adopter une stratégie de mobilité et de sécurité des données sur tous les appareils, partout et à tout moment, tout en assurant la conformité réglementaire.
 ---
 Nous avons demandé à Nicolas Cheymol, Enterprise Solution Architect et Practice Leader
  sur les solutions de gestion et sécurisation des périphériques chez Exakis Nelite, de

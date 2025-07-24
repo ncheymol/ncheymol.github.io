@@ -5,6 +5,8 @@ banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365
 date:   2024-11-01 21:00:00 +0200
 tags: W365
 lang: fr
+description: >-
+  Tutoriel pour surveiller les connexions et événements d'audit de Windows 365 avec PowerShell et Microsoft Graph. Guide complet pour administrateurs IT.
 ---
 
 
@@ -114,3 +116,9 @@ Cet outil PowerShell est un moyen efficace de surveiller les environnements Wind
 
 Le script est disponible sur mon GitHub, vous avez toute la liberté de l'utiliser et de le faire évoluer à votre guise :
 [PowerShell/W365/W365-monitoring at master · ncheymol/PowerShell](https://github.com/ncheymol/PowerShell/tree/master/W365/W365-monitoring)
+
+# Articles connexes
+
+- [Découvrez comment optimiser vos coûts avec Windows 365 Frontline Shared](/2025/06/23/D%C3%A9couvrez-comment-optimiser-vos-co%C3%BBts-avec-Windows-365-Frontline-Shared.html)
+- [Les meilleures nouveautés Windows 365 du 1er semestre 2025](/2025/08/05/Les%20meilleurs%20nouveaut%C3%A9es%20Windows%20365%20du%201er%20semestre%202025.html)
+- [Proactive Monitoring of Intune and Windows 365 avec PowerShell et Microsoft Graph](/2025/07/29/Proactive-Monitoring-of-Intune-and-Windows-365-with-PowerShell-and-Microsoft-Graph.html)

@@ -4,6 +4,8 @@ title: "How to deploy ConfigMgr client using Intune and Autopilot"
 date:   2020-08-19 21:00:00 +0200
 tags: Autopilot, Intune, ConfigMgr
 lang: en
+description: >-
+  Step-by-step guide to deploying the ConfigMgr client using Intune and Autopilot, including common issues and solutions for modern device management.
 ---
 
 I've wanted to write an article for a long time but didn't have enough. I tried a few time but never finished them, now it's time and hope it will be helpful.
@@ -194,3 +196,8 @@ Unfortunately I have 2 small issues remaining:
 - [Co-management series – Merging the Perimeter (part 7) – Co-management capabilities](https://byteben.com/bb/co-management-series-merging-the-perimeter-part-7-co-management-capabilities/)
 - [My PowerShell GitHub](https://github.com/ncheymol/PowerShell)
 - [Microsoft Endpoint Manager](https://endpoint.microsoft.com/)
+
+# Related articles
+
+- [Proactive Monitoring of Intune and Windows 365 with PowerShell and Microsoft Graph](/2025/07/29/Proactive-Monitoring-of-Intune-and-Windows-365-with-PowerShell-and-Microsoft-Graph.html)
+- [Installation et Configuration de Microsoft Tunnel en mode rootless sur Red Hat: Guide Pratique](/2024/11/22/Installation-et-Configuration-de-Microsoft-Tunnel-en-mode-rootless-sur-Red-Hat-Guide-Pratique.html)

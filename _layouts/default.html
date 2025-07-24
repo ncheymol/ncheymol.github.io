@@ -1,4 +1,46 @@
 <head>
     {% include analytics.html %}
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  {% if page.layout == "post" or page.date %}
+  "@type": "Article",
+  "headline": "{{ page.title | escape }}",
+  "description": "{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 | escape }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 | escape }}{% endif %}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author | escape }}"
+  },
+  "image": "{% if page.banner and page.banner != '' %}{{ page.banner }}{% endif %}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }
+  {% else %}
+  "@type": "WebSite",
+  "name": "{{ site.title | escape }}",
+  "description": "{{ site.description | strip_html | strip_newlines | truncate: 160 | escape }}",
+  "url": "{{ site.url }}"
+  {% endif %}
+}
+</script>
 </head>

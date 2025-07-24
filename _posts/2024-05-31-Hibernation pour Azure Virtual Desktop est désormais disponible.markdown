@@ -5,6 +5,8 @@ banner : ""
 date:   2024-05-31 21:00:00 +0200
 tags: AVD
 lang: fr
+description: >-
+  Découvrez la nouvelle fonctionnalité d'hibernation pour Azure Virtual Desktop, ses avantages, méthodes de configuration et impact sur la gestion des coûts et la flexibilité des VM.
 ---
 
 # Hibernation pour Azure Virtual Desktop est désormais disponible
@@ -45,3 +47,9 @@ Pour activer l'hibernation dans votre plan de mise à l'échelle, vous devrez :
 ---
 
 N'hésitez pas à me poser d'autres questions si vous avez besoin d'informations supplémentaires.
+
+# Articles connexes
+
+- [Découvrez comment optimiser vos coûts avec Windows 365 Frontline Shared](/2025/06/23/D%C3%A9couvrez-comment-optimiser-vos-co%C3%BBts-avec-Windows-365-Frontline-Shared.html)
+- [Les meilleures nouveautés Windows 365 du 1er semestre 2025](/2025/08/05/Les%20meilleurs%20nouveaut%C3%A9es%20Windows%20365%20du%201er%20semestre%202025.html)
+- [Proactive Monitoring of Intune and Windows 365 avec PowerShell et Microsoft Graph](/2025/07/29/Proactive-Monitoring-of-Intune-and-Windows-365-with-PowerShell-and-Microsoft-Graph.html)

@@ -2,6 +2,8 @@
 layout: page
 title: About
 permalink: /about/
+description: >-
+  À propos de Nicolas CHEYMOL : architecte, formateur et expert Modern Endpoint & Sécurité. Découvrez son parcours, ses compétences et ses contributions dans l'écosystème Microsoft.
 ---
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
