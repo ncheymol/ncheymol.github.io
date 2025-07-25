@@ -1,7 +1,7 @@
 ---
 title: "Proactive Monitoring of Intune and Windows 365 with PowerShell and Microsoft Graph"
 banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/intune-monitoring.jpeg?raw=true"
-date: 2025-07-29
+date: 2025-07-25
 tags: [Intune, Windows 365, PowerShell, Monitoring, Graph API]
 lang: en
 excerpt: >-
