@@ -1,411 +1,185 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ site.description }}">
-  <meta name="keywords" content="{{ site.keywords }}">
-  <meta name="author" content="{{ site.author }}">
-  <link rel="shortcut icon" type="image/png" href="https://avatars.githubusercontent.com/u/49396250">
-  <style>
-    :root {
-      --primary: #007acc;
-      --primary-light: #4fc3f7;
-      --accent: #e3f2fd;
-      --bg: #f9f9f9;
-      --bg-card: #fff;
-      --text: #222;
-      --text-light: #888;
-      --shadow: 0 2px 8px #0002;
-      --border: #e0e0e0;
-      --header-gradient: linear-gradient(180deg, #4fc3f7 0%, #007acc 100%);
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --primary: #4fc3f7;
-        --primary-light: #007acc;
-        --accent: #263645;
-        --bg: #181c20;
-        --bg-card: #23272e;
-        --text: #f1f1f1;
-        --text-light: #b0b0b0;
-        --shadow: 0 2px 16px #0008;
-        --border: #2c313a;
-        --header-gradient: linear-gradient(180deg, #007acc 0%, #23272e 100%);
-      }
-    }
-    html, body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      transition: background 0.3s, color 0.3s;
-      height: 100%;
-    }
-    .container {
-      display: flex;
-      min-height: 100vh;
-      align-items: stretch;
-    }
-    aside {
-      width: 320px;
-      min-width: 240px;
-      max-width: 400px;
-      background: var(--primary); /* Remplace le dégradé par une couleur unie */
-      color: var(--bg-card);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2.5rem 1.2rem 2rem 1.2rem;
-      border-radius: 0 32px 32px 0;
-      box-shadow: var(--shadow);
-      position: relative;
-      z-index: 2;
-      animation: gradientMove 8s ease-in-out infinite alternate;
-    }
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
-    }
-    aside img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 0.7rem;
-      border: 3px solid var(--bg-card);
-      box-shadow: 0 2px 8px #0003;
-      background: var(--bg-card);
-      object-fit: cover;
-      transition: transform 0.3s;
-    }
-    aside img:hover {
-      transform: scale(1.07) rotate(-3deg);
-      box-shadow: 0 8px 32px #0004;
-    }
-    aside h1 {
-      color: var(--bg-card);
-      font-size: 1.5rem;
-      margin-bottom: 0.2em;
-      letter-spacing: 1px;
-      text-shadow: 0 2px 8px #0003;
-      font-family: 'Segoe UI', Arial, sans-serif;
-    }
-    aside p {
-      color: var(--bg-card);
-      margin: 0.2em 0;
-      font-size: 1em;
-      text-shadow: 0 1px 4px #0002;
-      text-align: center;
-    }
-    aside a {
-      color: #fff;
-      background: var(--primary-light);
-      padding: 0.3em 0.8em;
-      border-radius: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 2px 8px #0002;
-      transition: background 0.2s, color 0.2s;
-      display: inline-block;
-      margin-top: 0.3em;
-      font-size: 0.97em;
-    }
-    aside a:hover {
-      background: #fff;
-      color: var(--primary);
-    }
-    main {
-      flex: 1;
-      padding: 2.5rem 2rem 2rem 2rem;
-      max-width: 100vw;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      min-width: 0;
-    }
-    .post-single {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 0 1rem 2rem 1rem;
-      background: var(--bg-card);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-      animation: floatIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
-    }
-    @keyframes floatIn {
-      from { opacity: 0; transform: translateY(40px) scale(0.97);}
-      to { opacity: 1; transform: translateY(0) scale(1);}
-    }
-    .banner {
-      background: var(--primary);
-      color: #fff;
-      padding: 0.7em 1em;
-      border-radius: 10px 10px 0 0;
-      margin-bottom: 1.2em;
-      font-weight: bold;
-      letter-spacing: 1px;
-      font-size: 1.1em;
-      box-shadow: 0 2px 8px #0002;
-      text-align: center;
-    }
-    .post-title {
-      margin: 0 0 0.2em 0;
-      color: var(--primary);
-      font-size: 2em;
-      font-weight: bold;
-      line-height: 1.2;
-      text-shadow: 0 1px 4px #0001;
-      transition: color 0.2s;
-    }
-    .post-date {
-      color: var(--text-light);
-      font-size: 1em;
-      margin-bottom: 1em;
-    }
-    .post-content {
-      font-size: 1.15em;
-      color: var(--text);
-      line-height: 1.7;
-      margin-top: 1.5em;
-    }
-    .post-content img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      display: block;
-      margin: 1.2em auto;
-    }
-    .aside-toggle {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      background: var(--primary-light);
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      font-size: 1.3em;
-      cursor: pointer;
-      box-shadow: 0 2px 8px #0002;
-      z-index: 10;
-      transition: background 0.2s;
-    }
-    .aside-toggle:hover {
-      background: var(--primary);
-    }
-    .aside-collapsed {
-      width: 60px !important;
-      min-width: 60px !important;
-      max-width: 60px !important;
-      padding: 1.2rem 0.3rem 1rem 0.3rem !important;
-      overflow: hidden;
-      transition: width 0.3s, min-width 0.3s, max-width 0.3s, padding 0.3s;
-    }
-    .aside-collapsed *:not(.aside-toggle) {
-      display: none !important;
-    }
-    .container aside {
-      transition: width 0.3s, min-width 0.3s, max-width 0.3s, padding 0.3s;
-    }
-    pre {
-      background: var(--accent);
-      color: var(--text);
-      border: 1.5px solid var(--primary-light);
-      border-radius: 8px;
-      padding: 0.7em 1em;
-      font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
-      font-size: 0.98em;
-      overflow-x: auto;
-      box-shadow: 0 2px 8px #0001;
-      margin: 1.2em 0;
-      display: block;
-    }
-    code {
-      background: none;
-      color: var(--primary);
-      border: none;
-      border-radius: 4px;
-      padding: 0.15em 0.4em;
-      font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
-      font-size: 0.97em;
-      display: inline;
-    }
-    @media (prefers-color-scheme: dark) {
-      pre {
-        background: var(--accent);
-        color: var(--text);
-        border: 1.5px solid var(--primary-light);
-        box-shadow: 0 2px 16px #0004;
-      }
-      code {
-        color: var(--primary-light);
-      }
-    }
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-      }
-      aside {
-        width: 100%;
-        max-width: 100vw;
-        border-radius: 0 0 32px 32px;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 1.5rem 1rem 1.2rem 1rem;
-        text-align: left;
-      }
-      aside img {
-        margin-bottom: 0;
-        margin-right: 1.2rem;
-      }
-      aside h1, aside p, aside a {
-        text-align: left;
-      }
-      main {
-        padding: 2rem 1rem 1rem 1rem;
-      }
-    }
-    @media (max-width: 700px) {
-      .post-single {
-        padding: 1rem;
-      }
-      aside {
-        flex-direction: column;
-        align-items: center;
-        padding: 1.2rem 0.5rem 1rem 0.5rem;
-      }
-      aside img {
-        margin-right: 0;
-        margin-bottom: 0.7rem;
-      }
-    }
-    /* Bouton copier pour les blocs de code */
-    .pre-copy-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--primary-light);
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 0.12em 0.45em;
-      font-size: 1em;
-      cursor: pointer;
-      box-shadow: 0 2px 8px #0002;
-      transition: background 0.2s;
-      z-index: 5;
-      width: 1.8em;
-      height: 1.8em;
-      margin-bottom: 0.1em;
-      margin-top: 0.1em;
-      margin-right: 0.1em;
-    }
-    .pre-copy-btn svg {
-      width: 1em;
-      height: 1em;
-      display: block;
-      pointer-events: none;
-    }
-    .pre-copy-btn.copied {
-      background: var(--primary);
-    }
-    .pre-copy-btn-wrapper {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      width: 100%;
-      margin-bottom: -0.2em;
-    }
-    .pre-block {
-      position: relative;
-      margin-top: 0;
-    }
-  </style>
-  {% include analytics.html %}
-</head>
-<body>
-  <div class="container">
-    <aside id="sidebar" style="position:relative;">
-      <button class="aside-toggle" onclick="document.getElementById('sidebar').classList.toggle('aside-collapsed')" title="Réduire le menu" style="background:var(--primary-light);color:#fff;border:none;border-radius:50%;width:36px;height:36px;font-size:1.3em;cursor:pointer;box-shadow:0 2px 8px #0002;transition:background 0.2s;position:absolute;top:18px;left:18px;z-index:20;">
-        &#9776;
-      </button>
-      <div style="margin-top:90px;"></div>
-      <img src="https://sessionize.com/image/75f7-400o400o2-p2RqZkebBtVvM63NkRynet.jpg" alt="Photo">
-      <h1>Nicolas CHEYMOL</h1>
-      <p>
-        <a href="/">
-          Accueil
-        </a>
-      </p>
-      <p>Architecte&nbsp;| Practice Leader&nbsp;| Expert Modern Workplace &amp; Sécurité&nbsp;| Formateur &amp; Conférencier</p>
-      <p>
-        <a href="https://www.linkedin.com/in/ncheymol/" target="_blank" rel="noopener">
-          Voir mon profil LinkedIn
-        </a>
-      </p>
-      <p>
-        <a href="https://github.com/ncheymol" target="_blank" rel="noopener">
-          Voir mon GitHub
-        </a>
-      </p>
-      <p>
-        <a href="https://sessionize.com/nicolas-cheymol/" target="_blank" rel="noopener">
-          Voir mon Sessionize
-        </a>
-      </p>
-      <p>
-        <a href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener">
-          Flux RSS du blog
-        </a>
-      </p>
-      <p>Retrouvez ici mes derniers articles, astuces et réflexions sur la gestion des périphériques ainsi que la sécurité et le cloud.</p>
-    </aside>
-    <main>
-      <section class="post-single">
-        <div class="banner">
-          {% if page.banner and page.banner != "" %}
-            <img src="{{ page.banner }}" alt="Bannière" style="max-width:100%;height:auto;border-radius:8px;">
-          {% else %}
-          
+---
+layout: default
+---
+
+<div class="container">
+  <aside>
+    <img src="https://avatars.githubusercontent.com/u/49396250" alt="{{ site.author }} - Photo de profil" width="80" height="80">
+    <h1>{{ site.author }}</h1>
+    <p>{{ site.description }}</p>
+    <nav aria-label="Navigation principale">
+      <a href="{{ '/' | relative_url }}" class="nav-link">Accueil</a>
+      <a href="{{ '/about' | relative_url }}" class="nav-link">À propos</a>
+      <a href="mailto:{{ site.email }}" class="nav-link">Contact</a>
+      {% if site.linkedin_username %}
+      <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
+      {% endif %}
+      {% if site.github_username %}
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub</a>
+      {% endif %}
+    </nav>
+    <button class="aside-toggle" onclick="toggleAside()" aria-label="Basculer la barre latérale">☰</button>
+  </aside>
+
+  <main>
+    <article class="post-single" itemscope itemtype="http://schema.org/BlogPosting">
+      {% if page.banner and page.banner != '' %}
+      <div class="banner">
+        <img src="{{ page.banner }}" alt="Bannière de l'article" class="banner-image" itemprop="image">
+      </div>
+      {% endif %}
+
+      <header class="post-header">
+        <h1 class="post-title" itemprop="headline">{{ page.title | escape }}</h1>
+        <div class="post-meta">
+          <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ page.date | date: "%d %B %Y" }}
+          </time>
+          {% if page.author %}
+          <span class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            par <span itemprop="name">{{ page.author }}</span>
+          </span>
           {% endif %}
-        </div>        
-        <h1 class="post-title">{{ page.title }}</h1>
-        <div class="post-date">Publié le {{ page.date | date: "%d %B %Y" }}</div>
-        <div class="post-content">
-          {{ content }}
+          {% if page.tags and page.tags.size > 0 %}
+          <div class="post-tags">
+            {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
         </div>
-      </section>
-    </main>
-  </div>
+      </header>
+
+      <div class="post-content" itemprop="articleBody">
+        {{ content }}
+      </div>
+
+      <footer class="post-footer">
+        <div class="post-navigation">
+          {% if page.previous.url %}
+          <a href="{{ page.previous.url | relative_url }}" class="nav-previous" rel="prev">
+            <span class="nav-label">← Article précédent</span>
+            <span class="nav-title">{{ page.previous.title | escape }}</span>
+          </a>
+          {% endif %}
+          
+          {% if page.next.url %}
+          <a href="{{ page.next.url | relative_url }}" class="nav-next" rel="next">
+            <span class="nav-label">Article suivant →</span>
+            <span class="nav-title">{{ page.next.title | escape }}</span>
+          </a>
+          {% endif %}
+        </div>
+
+        <div class="share-buttons">
+          <h3>Partager cet article</h3>
+          <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}" 
+             target="_blank" rel="noopener noreferrer" class="share-button twitter" aria-label="Partager sur Twitter">
+            Twitter
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | uri_escape }}" 
+             target="_blank" rel="noopener noreferrer" class="share-button linkedin" aria-label="Partager sur LinkedIn">
+            LinkedIn
+          </a>
+          <button onclick="copyToClipboard('{{ page.url | absolute_url }}')" class="share-button copy" aria-label="Copier le lien">
+            Copier le lien
+          </button>
+        </div>
+      </footer>
+    </article>
+  </main>
+</div>
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll("pre").forEach(function(pre) {
-    pre.classList.add("pre-block");
-    var wrapper = document.createElement("div");
-    wrapper.className = "pre-copy-btn-wrapper";
-    var btn = document.createElement("button");
-    btn.className = "pre-copy-btn";
-    btn.title = "Copier le code";
-    btn.innerHTML = `<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='9' width='13' height='13' rx='2' ry='2'></rect><path d='M5 15V5a2 2 0 0 1 2-2h10'></path></svg>`;
-    btn.onclick = function() {
-      var code = pre.querySelector("code");
-      var text = code ? code.innerText : pre.innerText;
-      navigator.clipboard.writeText(text).then(function() {
-        btn.classList.add("copied");
-        setTimeout(function() { btn.classList.remove("copied"); }, 1200);
+  // Optimized sidebar toggle
+  function toggleAside() {
+    const aside = document.querySelector('aside');
+    const isCollapsed = aside.classList.contains('aside-collapsed');
+    
+    requestAnimationFrame(() => {
+      aside.classList.toggle('aside-collapsed', !isCollapsed);
+      aside.setAttribute('aria-expanded', isCollapsed ? 'true' : 'false');
+    });
+  }
+
+  // Copy to clipboard functionality
+  function copyToClipboard(url) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(url).then(() => {
+        showNotification('Lien copié dans le presse-papier !');
+      }).catch(err => {
+        console.error('Erreur lors de la copie:', err);
+        fallbackCopyToClipboard(url);
       });
-    };
-    wrapper.appendChild(btn);
-    pre.parentNode.insertBefore(wrapper, pre);
-  });
-});
+    } else {
+      fallbackCopyToClipboard(url);
+    }
+  }
+
+  // Fallback for older browsers
+  function fallbackCopyToClipboard(url) {
+    const textArea = document.createElement('textarea');
+    textArea.value = url;
+    textArea.style.position = 'fixed';
+    textArea.style.opacity = '0';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+      document.execCommand('copy');
+      showNotification('Lien copié dans le presse-papier !');
+    } catch (err) {
+      console.error('Erreur lors de la copie:', err);
+      showNotification('Impossible de copier le lien.');
+    }
+    
+    document.body.removeChild(textArea);
+  }
+
+  // Show notification
+  function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.textContent = message;
+    notification.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+      notification.style.opacity = '0';
+      notification.style.transform = 'translateY(-20px)';
+      setTimeout(() => document.body.removeChild(notification), 300);
+    }, 2000);
+  }
+
+  // Intersection Observer for lazy loading
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            observer.unobserve(img);
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      imageObserver.observe(img);
+    });
+  }
 </script>
-</body>
-</html>

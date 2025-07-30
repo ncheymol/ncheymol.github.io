@@ -1,2 +1,12 @@
 User-agent: *
-Allow: / 
+Allow: /
+
+# Disallow crawling of specific paths if needed
+# Disallow: /private/
+# Disallow: /_sources/
+
+# Sitemap location
+Sitemap: https://ncheymol.github.io/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1 

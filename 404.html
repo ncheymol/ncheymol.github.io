@@ -1,25 +1,263 @@
 ---
+layout: default
+title: "Page non trouvée"
+description: "La page que vous recherchez n'existe pas ou a été déplacée."
 permalink: /404.html
-layout: page
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
+<div class="container">
+  <aside>
+    <img src="https://avatars.githubusercontent.com/u/49396250" alt="{{ site.author }} - Photo de profil" width="80" height="80">
+    <h1>{{ site.author }}</h1>
+    <p>{{ site.description }}</p>
+    <nav aria-label="Navigation principale">
+      <a href="{{ '/' | relative_url }}" class="nav-link">Accueil</a>
+      <a href="{{ '/about' | relative_url }}" class="nav-link">À propos</a>
+      <a href="mailto:{{ site.email }}" class="nav-link">Contact</a>
+      {% if site.linkedin_username %}
+      <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
+      {% endif %}
+      {% if site.github_username %}
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub</a>
+      {% endif %}
+    </nav>
+    <button class="aside-toggle" onclick="toggleAside()" aria-label="Basculer la barre latérale">☰</button>
+  </aside>
+
+  <main>
+    <div class="error-container">
+      <div class="error-content">
+        <h1 class="error-title">404</h1>
+        <h2 class="error-subtitle">Oups ! Page non trouvée</h2>
+        <p class="error-message">
+          La page que vous recherchez n'existe pas ou a été déplacée. 
+          Peut-être qu'un de ces liens vous aidera à trouver ce que vous cherchez :
+        </p>
+        
+        <div class="error-actions">
+          <a href="{{ '/' | relative_url }}" class="btn-primary">
+            🏠 Retour à l'accueil
+          </a>
+          <button onclick="history.back()" class="btn-secondary">
+            ← Page précédente
+          </button>
+        </div>
+
+        <div class="search-suggestions">
+          <h3>Articles populaires :</h3>
+          <ul class="popular-posts">
+            {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+            {% for post in sorted_posts limit: 5 %}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+              <span class="post-date-small">{{ post.date | date: "%d %B %Y" }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="contact-info">
+          <p>Si vous pensez qu'il s'agit d'une erreur, n'hésitez pas à me <a href="mailto:{{ site.email }}">contacter</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<style>
+.error-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-content {
+  background: var(--bg-card);
+  border-radius: 18px;
+  padding: 3rem 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.error-title {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 1rem 0;
+  line-height: 1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.error-subtitle {
+  font-size: 2rem;
+  color: var(--text);
+  margin: 0 0 1.5rem 0;
+  font-weight: 600;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--accent);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.search-suggestions {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.search-suggestions h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.popular-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popular-posts li {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-posts li:last-child {
+  border-bottom: none;
+}
+
+.popular-posts a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  flex: 1;
+  text-align: left;
+}
+
+.popular-posts a:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+.post-date-small {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-left: 1rem;
+}
+
+.contact-info {
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  color: var(--text-light);
+}
+
+.contact-info a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .error-title {
+    font-size: 4rem;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
+  
+  .error-subtitle {
+    font-size: 1.5rem;
   }
+  
+  .error-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 200px;
+  }
+  
+  .popular-posts li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .post-date-small {
+    margin-left: 0;
+  }
+}
 </style>
 
-<div class="container">
-  <h1>404</h1>
+<script>
+  function toggleAside() {
+    const aside = document.querySelector('aside');
+    const isCollapsed = aside.classList.contains('aside-collapsed');
+    
+    requestAnimationFrame(() => {
+      aside.classList.toggle('aside-collapsed', !isCollapsed);
+      aside.setAttribute('aria-expanded', isCollapsed ? 'true' : 'false');
+    });
+  }
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  // Track 404 errors in analytics
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'page_view', {
+      'page_title': '404 - Page Not Found',
+      'page_location': window.location.href,
+      'custom_dimension_1': '404'
+    });
+  }
+</script>

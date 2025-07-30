@@ -1,9 +1,60 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics.id }}"></script>
+<!-- Optimized Google Analytics with performance and privacy considerations -->
+{% if site.google_analytics.id and jekyll.environment == 'production' %}
 <script>
-  /* global dataLayer */
+  // Optimized Google Analytics implementation
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  
+  // Set default values for privacy
+  gtag('consent', 'default', {
+    'analytics_storage': 'granted',
+    'ad_storage': 'denied',
+    'wait_for_update': 500
+  });
+  
   gtag('js', new Date());
-  gtag('config', '{{ site.google_analytics.id }}');
+  gtag('config', '{{ site.google_analytics.id }}', {
+    // Performance optimizations
+    'transport_type': 'beacon',
+    'anonymize_ip': true,
+    'allow_google_signals': false,
+    'send_page_view': true,
+    // Privacy focused settings
+    'cookie_flags': 'SameSite=None;Secure',
+    'cookie_expires': 63072000, // 2 years in seconds
+    // Custom dimensions for better analytics
+    'custom_map': {
+      'custom_dimension_1': 'page_type'
+    }
+  });
+
+  // Send page type information
+  {% if page.layout %}
+  gtag('event', 'page_view', {
+    'custom_dimension_1': '{{ page.layout }}'
+  });
+  {% endif %}
+
+  // Performance timing
+  window.addEventListener('load', function() {
+    if (window.performance && window.performance.timing) {
+      var loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+      gtag('event', 'timing_complete', {
+        'name': 'load',
+        'value': loadTime
+      });
+    }
+  });
 </script>
+
+<!-- Load GA script asynchronously with optimizations -->
+<script async 
+        src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics.id }}"
+        onload="console.log('Google Analytics loaded')"
+        onerror="console.warn('Google Analytics failed to load')">
+</script>
+
+<!-- Preconnect to Google Analytics for faster loading -->
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+{% endif %}
