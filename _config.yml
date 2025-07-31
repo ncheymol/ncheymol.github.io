@@ -34,9 +34,36 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-compress-images
+
+# Performance optimizations
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
+
+# Image optimization
+compress_images:
+  jpg:
+    quality: 85
+  png:
+    quality: 85
+  gif:
+    interlaced: false
+  svg:
+    multipass: false
 
 google_analytics:
   id: "G-GK9X2TK4W9"
+
+# SEO settings
+lang: fr
+timezone: Europe/Paris
 
 
 # Exclude from processing.

@@ -1,37 +1,44 @@
 ---
+title: "Proactive Monitoring of Intune and Windows 365 with PowerShell and Microsoft Graph"
+banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/intune-monitoring.jpeg?raw=true"
+date: 2025-08-05
+tags: [Intune, Windows 365, PowerShell, Monitoring, Graph API]
+lang: fr
 description: >-
   Découvrez les nouveautés majeures de Windows 365 du 1er semestre 2025 : nouvelles fonctionnalités, améliorations et conseils pour les entreprises et IT pros.
 ---
 # Les meilleures nouveautés Windows 365 du 1er semestre 2025
 
+Week of June 30, 2025
 - **Démarrage intelligent pour Windows 365 Frontline en mode dédié (aperçu)**  
-Les Cloud PC Windows 365 Frontline peuvent désormais prédire quand un utilisateur va se connecter et démarrer leur Cloud PC à l'avance. Cette prédiction améliore les temps de connexion pour les utilisateurs.  
+Désormais votre CPC Frontline prédit que vous allez vous connecter et sort votre machine de veille amaliorant ainsi l'expérience utilisateur  
 [En savoir plus](https://learn.microsoft.com/fr-fr/windows-365/enterprise/introduction-windows-365-frontline)
 
-- **Gestion de la concurrence en mode dédié pour Windows 365 Frontline désormais disponible**  
-La gestion de la concurrence en mode dédié pour Windows 365 Frontline est désormais généralement disponible (fin de la préversion).  
-[En savoir plus](https://learn.microsoft.com/fr-fr/windows-365/enterprise/create-provisioning-policy)
-
+Week of June 2, 2025
 - **Support de Teams VDI 1.0 sur iOS (aperçu)**  
-Windows 365 prend désormais en charge Teams VDI 1.0 sur iOS.  
+Avec cette évolution, l'optimisation de teams VDI est désormais disponible depuis iOS venant renforcer l'offre de mobilité de Windows 365
 [En savoir plus](https://learn.microsoft.com/fr-fr/windows-365/enterprise/teams-on-cloud-pc)
 
+Week of April 28, 2025
 - **Credential Guard et HVCI activés par défaut**  
-Les nouveaux Cloud PC provisionnés ou reprovisionnés avec une image Windows 11 ont désormais VBS, HVCI et Credential Guard activés par défaut.  
+Il n'est désormais plus necessaire d'activer les fonctionalités de sécurité W11 VBS, HVCI et Credential Guard sur les machines Windows 365
 [En savoir plus](https://learn.microsoft.com/fr-fr/windows-365/enterprise/security)
 
 - **Protection des jetons (aperçu) dans l’application Windows sur les appareils Windows**  
-Vous pouvez désormais utiliser une stratégie d'accès conditionnel pour exiger la protection des jetons d'authentification sur les appareils Windows. Cela réduit les risques liés au vol de jetons en s'assurant qu'un jeton n'est utilisable que depuis l'appareil prévu.  
-[En savoir plus](https://learn.microsoft.com/fr-fr/entra/identity/conditional-access/concept-token-protection)
+La Windows App est désormais compatible avec la protection des jetons d'authentification EntraID ainsi que sa vérification via les accès conditionnels. cette nuvelle fonctionalité en pré-version renforce encore la posture de sécurité de Windows 365.
+ [En savoir plus](https://learn.microsoft.com/fr-fr/entra/identity/conditional-access/concept-token-protection)
 
+Week of April 21, 2025
 - **Déplacement de Cloud PC sélectionnés vers une autre région ou connexion réseau Azure**  
-Vous pouvez désormais déplacer des Cloud PC sélectionnés d'une région ou d'une connexion réseau Azure (ANC) à une autre.  
+Vous pouvez désormais déplacer des Cloud PC sélectionnés d'une région ou d'une connexion réseau Azure (ANC) à une autre. cela est bien utile lors d'un changement de régementation, le troubleshooting, la mutation d'un collaborateur ou bien d'autres cas d'usage.
 [En savoir plus](https://learn.microsoft.com/fr-fr/windows-365/enterprise/move-cloud-pc)
 
+Week of April 14, 2025
 - **Statut de santé pour les points de restauration Cloud PC**  
-Vous pouvez désormais voir l'état de santé des points de restauration Cloud PC avant de lancer une restauration.  
+Il n'y a rien de plus frustrant que d'atendre  ka fin d'une restauration pou se rendre compte que la machine n'est pas fonctionnelle. Microsoft permet désormais de vérifier l'état de santé avant de lancer la restoration et ainsi choisir ke bon snapshot
 [En savoir plus](https://learn.microsoft.com/fr-fr/windows-365/enterprise/restore-single-cloud-pc)
 
+Week of March 31, 2025
 - **Option de fréquence de connexion "À chaque connexion" désormais disponible**  
 L'option de fréquence de connexion "À chaque connexion" est désormais disponible en général (fin de la préversion).  
 [En savoir plus](https://learn.microsoft.com/fr-fr/windows-365/enterprise/set-conditional-access-policies)

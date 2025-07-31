@@ -1,2 +1,18 @@
 User-agent: *
-Allow: / 
+Allow: /
+
+# Optimize crawling
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://ncheymol.github.io/sitemap.xml
+
+# Disallow archive and temporary files
+Disallow: /_archive/
+Disallow: /_sources/
+Disallow: /_layouts/
+Disallow: /_includes/
+Disallow: /_posts/
+Disallow: /_config.yml
+Disallow: /Gemfile
+Disallow: /Gemfile.lock 

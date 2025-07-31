@@ -1,0 +1,32 @@
+{
+  "name": "Blog de Nicolas CHEYMOL",
+  "short_name": "Nicolas CHEYMOL",
+  "description": "Blog personnel de Nicolas CHEYMOL - Expert Modern Workplace & Sécurité",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9f9f9",
+  "theme_color": "#007acc",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "https://sessionize.com/image/75f7-400o400o2-p2RqZkebBtVvM63NkRynet.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://sessionize.com/image/75f7-400o400o2-p2RqZkebBtVvM63NkRynet.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["technology", "business", "education"],
+  "lang": "fr",
+  "dir": "ltr"
+} 
