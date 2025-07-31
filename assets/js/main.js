@@ -153,6 +153,7 @@
     constructor() {
       this.sidebar = $('#sidebar');
       this.toggleBtn = $('.aside-toggle');
+      this.skipLink = $('.skip-link');
       
       if (this.sidebar && this.toggleBtn) {
         this.init();
@@ -180,6 +181,15 @@
       this.toggleBtn.setAttribute('aria-label', 
         isCollapsed ? 'Développer le menu' : 'Réduire le menu'
       );
+      
+      // Adjust skip link position when aside is collapsed
+      if (this.skipLink) {
+        if (isCollapsed) {
+          this.skipLink.style.left = '70px';
+        } else {
+          this.skipLink.style.left = '6px';
+        }
+      }
     }
   }
 
@@ -368,6 +378,8 @@
         border-radius: 4px;
         z-index: 1000;
         transition: top 0.3s;
+        font-size: 14px;
+        font-weight: 500;
       `;
       
       skipLink.addEventListener('focus', () => {
@@ -378,7 +390,11 @@
         skipLink.style.top = '-40px';
       });
       
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      // Only add skip link if we're not on mobile and aside is not collapsed
+      const isMobile = window.innerWidth <= 900;
+      if (!isMobile) {
+        document.body.insertBefore(skipLink, document.body.firstChild);
+      }
     }
 
     enhanceKeyboardNavigation() {

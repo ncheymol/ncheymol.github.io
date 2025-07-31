@@ -149,7 +149,7 @@ main {
   margin: 0 auto;
   padding: 0 1rem 2rem 1rem;
   display: grid;
-  gap: 1.5rem;
+  gap: 0.75rem;
 }
 
 .post {
@@ -159,7 +159,7 @@ main {
   display: flex;
   align-items: stretch;
   gap: 1.2rem;
-  padding: 1rem 1.3rem;
+  padding: 0.5rem 1rem;
   border: 1px solid var(--border);
   transition: var(--transition);
   position: relative;
@@ -201,9 +201,9 @@ main {
 }
 
 .post-title {
-  margin: 0 0 0.2em 0;
+  margin: 0 0 0.1em 0;
   color: var(--primary);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
   line-height: 1.2;
   text-shadow: 0 1px 4px #0001;
@@ -223,15 +223,15 @@ main {
 
 .post-date {
   color: var(--text-light);
-  font-size: 0.85em;
-  margin-bottom: 0.4em;
+  font-size: 0.75em;
+  margin-bottom: 0.2em;
 }
 
 .post-desc {
-  margin-top: 0.3em;
-  font-size: 0.95em;
+  margin-top: 0.2em;
+  font-size: 0.85em;
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* ===== SEARCH & FILTERS ===== */
@@ -495,20 +495,20 @@ code {
 
 @media (max-width: 700px) {
   .blog-list {
-    gap: 1rem;
+    gap: 0.5rem;
   }
   
   .post {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0.8rem;
+    padding: 0.4rem;
   }
   
   .post-img {
     width: 100%;
     max-width: 100%;
     height: 160px;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.3em;
   }
   
   aside {
@@ -647,15 +647,31 @@ code {
   left: 6px;
   background: var(--primary);
   color: white;
-  padding: 8px;
+  padding: 8px 12px;
   text-decoration: none;
   border-radius: 4px;
   z-index: 1000;
-  transition: top 0.3s;
+  transition: top 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .skip-link:focus {
   top: 6px;
+}
+
+/* Hide skip link on mobile and when aside is collapsed */
+@media (max-width: 900px) {
+  .skip-link {
+    display: none !important;
+  }
+}
+
+/* When aside is collapsed, adjust skip link position */
+.aside-collapsed ~ .skip-link,
+.aside-collapsed + .skip-link {
+  left: 70px;
 }
 
 /* ===== PRINT STYLES ===== */
