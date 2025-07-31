@@ -147,9 +147,9 @@ main {
 .blog-list {
   max-width: 850px;
   margin: 0 auto;
-  padding: 0 0.5rem 1.5rem 0.5rem;
+  padding: 0 0.3rem 1rem 0.3rem;
   display: grid;
-  gap: 0.4rem;
+  gap: 0.3rem;
 }
 
 .post {
@@ -158,8 +158,8 @@ main {
   box-shadow: var(--shadow);
   display: flex;
   align-items: stretch;
-  gap: 0.6rem;
-  padding: 0.2rem 0.6rem;
+  gap: 0.4rem;
+  padding: 0.15rem 0.4rem;
   border: 1px solid var(--border);
   transition: var(--transition);
   position: relative;
@@ -174,9 +174,9 @@ main {
 }
 
 .post-img {
-  width: 160px;
-  min-width: 120px;
-  max-width: 200px;
+  width: 140px;
+  min-width: 100px;
+  max-width: 180px;
   object-fit: cover;
   border-radius: var(--border-radius);
   height: 100%;
