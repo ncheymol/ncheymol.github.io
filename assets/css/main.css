@@ -204,7 +204,7 @@ main {
 .post-title {
   margin: 0;
   color: var(--primary);
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.2;
   text-shadow: 0 1px 4px #0001;
@@ -224,7 +224,7 @@ main {
 
 .post-date {
   color: var(--text-light);
-  font-size: 0.65em;
+  font-size: 0.55em;
   margin-bottom: 0.05em;
 }
 
