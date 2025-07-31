@@ -67,9 +67,9 @@ layout: default
       />
     </div>
     
-    <section class="blog-list" aria-label="Liste des articles">
-      {% for post in site.posts %}
-      <article class="post" data-lang="{{ post.lang | default: 'fr' }}" data-tags="{{ post.tags | join: ',' }}">
+          <section class="blog-list" aria-label="Liste des articles">
+        {% for post in site.posts %}
+        <article class="post" data-lang="{{ post.lang | default: 'fr' }}" data-tags="{{ post.tags | join: ',' }}" data-keywords="{{ post.keywords | default: '' }}">
         {% if post.banner and post.banner != '' %}
           <img src="{{ post.banner }}" alt="Bannière de l'article" class="post-img" loading="lazy">
         {% endif %}

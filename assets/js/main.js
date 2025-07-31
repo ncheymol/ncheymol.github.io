@@ -137,9 +137,10 @@
         const desc = post.querySelector('.post-desc')?.textContent.toLowerCase() || '';
         const lang = post.getAttribute('data-lang') || 'fr';
         const tags = (post.getAttribute('data-tags') || '').split(',');
+        const keywords = post.getAttribute('data-keywords') || '';
 
         const matchesLang = selectedLang === 'all' || lang === selectedLang;
-        const matchesQuery = title.includes(query) || desc.includes(query);
+        const matchesQuery = title.includes(query) || desc.includes(query) || keywords.toLowerCase().includes(query);
         const matchesTag = allSelected || this.selectedTags.some(tag => tags.includes(tag));
 
         post.style.display = (matchesLang && matchesQuery && matchesTag) ? '' : 'none';

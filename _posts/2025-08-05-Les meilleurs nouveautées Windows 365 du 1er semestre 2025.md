@@ -3,6 +3,7 @@ title: "Proactive Monitoring of Intune and Windows 365 with PowerShell and Micro
 banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/intune-monitoring.jpeg?raw=true"
 date: 2025-08-05
 tags: [Intune, Windows 365, PowerShell, Monitoring, Graph API]
+keywords: w365, Windows 365, nouveautés, 2025, features
 lang: fr
 description: >-
   Découvrez les nouveautés majeures de Windows 365 du 1er semestre 2025 : nouvelles fonctionnalités, améliorations et conseils pour les entreprises et IT pros.

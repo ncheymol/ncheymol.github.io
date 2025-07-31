@@ -3,6 +3,7 @@ title: "Proactive Monitoring of Intune and Windows 365 with PowerShell and Micro
 banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/intune-monitoring.jpeg?raw=true"
 date: 2025-07-29
 tags: [Intune, Windows 365, PowerShell, Monitoring, Graph API]
+keywords: w365, Windows 365, Intune, PowerShell, Microsoft Graph, monitoring
 lang: en
 excerpt: >-
   Discover how to automate proactive monitoring of your Intune connectors, tunnels, ANC, and Windows 365 provisioning with an advanced PowerShell script using Microsoft Graph and Outlook.

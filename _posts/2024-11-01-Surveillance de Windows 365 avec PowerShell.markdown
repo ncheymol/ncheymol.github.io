@@ -3,7 +3,8 @@ layout: post
 title:  "Surveillance de Windows 365 avec PowerShell"
 banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-monitoring/1.jpg?raw=true"
 date:   2024-11-01 21:00:00 +0200
-tags: W365
+tags: Windows 365
+keywords: w365, Windows 365, PowerShell, monitoring, surveillance
 lang: fr
 description: >-
   Tutoriel pour surveiller les connexions et événements d'audit de Windows 365 avec PowerShell et Microsoft Graph. Guide complet pour administrateurs IT.
@@ -83,7 +84,7 @@ Ce code récupère les connexions réseau Azure et affiche des informations tell
 
 ---
 
-# Surveillance de la Fin du Provisioning des Machines W365
+# Surveillance de la Fin du Provisioning des Machines Windows 365
 Cette section du script récupère les événements d'audit récents et envoie un email en cas de nouveaux provisionnements de CloudPC, incluant pour le moment l'ID de la machine et de l'utilisateur.
 
 À terme, il indiquera également d'autres informations importantes comme le profil utilisé, le nom d'utilisateur et pourra même envoyer cette notification à ce dernier ou à son manager.

@@ -149,7 +149,7 @@ main {
   margin: 0 auto;
   padding: 0 1rem 2rem 1rem;
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .post {
@@ -158,8 +158,8 @@ main {
   box-shadow: var(--shadow);
   display: flex;
   align-items: stretch;
-  gap: 1.5rem;
-  padding: 1.2rem 1.5rem;
+  gap: 1.2rem;
+  padding: 1rem 1.3rem;
   border: 1px solid var(--border);
   transition: var(--transition);
   position: relative;
@@ -174,9 +174,9 @@ main {
 }
 
 .post-img {
-  width: 150px;
-  min-width: 120px;
-  max-width: 180px;
+  width: 130px;
+  min-width: 100px;
+  max-width: 160px;
   object-fit: cover;
   border-radius: var(--border-radius);
   height: 100%;
@@ -203,7 +203,7 @@ main {
 .post-title {
   margin: 0 0 0.2em 0;
   color: var(--primary);
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 700;
   line-height: 1.2;
   text-shadow: 0 1px 4px #0001;
@@ -223,15 +223,15 @@ main {
 
 .post-date {
   color: var(--text-light);
-  font-size: 0.97em;
+  font-size: 0.85em;
   margin-bottom: 0.4em;
 }
 
 .post-desc {
   margin-top: 0.3em;
-  font-size: 1.08em;
+  font-size: 0.95em;
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ===== SEARCH & FILTERS ===== */
@@ -495,20 +495,20 @@ code {
 
 @media (max-width: 700px) {
   .blog-list {
-    gap: 1.2rem;
+    gap: 1rem;
   }
   
   .post {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 0.8rem;
   }
   
   .post-img {
     width: 100%;
     max-width: 100%;
-    height: 180px;
-    margin-bottom: 0.7em;
+    height: 160px;
+    margin-bottom: 0.6em;
   }
   
   aside {
