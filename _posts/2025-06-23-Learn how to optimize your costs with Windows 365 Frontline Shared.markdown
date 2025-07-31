@@ -15,7 +15,7 @@ description: >-
 
 This blog post will explain how to set up Windows 365 Frontline Shared within your organization, detailing each step of the process.
 
-Article Français : lien
+[Article en Français](https://ncheymol.github.io/2025/06/23/D%C3%A9couvrez-comment-optimiser-vos-co%C3%BBts-avec-Windows-365-Frontline-Shared.html)
 
 # User Settings
 This setting does not apply to Windows 365 Frontline Shared machines
