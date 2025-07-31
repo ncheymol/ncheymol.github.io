@@ -3,7 +3,7 @@ layout: post
 title:  "Découvrez comment optimiser vos coûts avec Windows 365 Frontline Shared"
 banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-Shared/1.jpg?raw=true"
 date:   2025-06-23 21:00:00 +0200
-tags: Windows 365
+tags: [Windows 365]
 keywords: w365, Windows 365, Frontline Shared, optimisation, coûts
 lang: fr
 description: >-

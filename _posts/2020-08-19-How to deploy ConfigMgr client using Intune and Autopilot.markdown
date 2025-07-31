@@ -2,7 +2,7 @@
 layout: post
 title: "How to deploy ConfigMgr client using Intune and Autopilot"
 date:   2020-08-19 21:00:00 +0200
-tags: Autopilot, Intune, ConfigMgr
+tags: [Autopilot, Intune, ConfigMgr]
 lang: en
 description: >-
   Step-by-step guide to deploying the ConfigMgr client using Intune and Autopilot, including common issues and solutions for modern device management.

@@ -3,7 +3,7 @@ layout: post
 title:  "Hibernation pour Azure Virtual Desktop est désormais disponible"
 banner : ""
 date:   2024-05-31 21:00:00 +0200
-tags: AVD
+tags: [AVD]
 lang: fr
 description: >-
   Découvrez la nouvelle fonctionnalité d'hibernation pour Azure Virtual Desktop, ses avantages, méthodes de configuration et impact sur la gestion des coûts et la flexibilité des VM.

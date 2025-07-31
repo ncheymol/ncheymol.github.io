@@ -2,11 +2,11 @@
 layout: post
 title:  "Gérer qui a accès à un enregistrement de réunion, à une transcription, au récap IA..."
 banner : ""
-date:   2024-05-31 21:00:00 +0200
-tags: Copilot
+date:   2024-05-27 21:00:00 +0200
+tags: [Teams, IA, Copilot, Sécurité]
 lang: fr
 description: >-
-  Contrôlez l'accès aux enregistrements, transcriptions et récapitulatifs IA dans Microsoft Teams. Découvrez les nouvelles options de sécurité et de partage pour vos réunions.
+  Découvrez comment gérer les accès aux enregistrements de réunion, transcriptions et récapitulatifs IA dans Microsoft Teams.
 ---
 
 # Microsoft Teams : contrôlez l'accès à vos réunions enregistrées avec Copilot

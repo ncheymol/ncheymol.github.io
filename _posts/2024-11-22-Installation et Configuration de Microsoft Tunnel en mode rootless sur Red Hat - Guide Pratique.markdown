@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Installation et Configuration de Microsoft Tunnel en mode rootless sur Red Hat: Guide Pratique"
+title:  "Installation et Configuration de Microsoft Tunnel en mode rootless sur Red Hat - Guide Pratique"
 banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/tunnel/banner.png?raw=true"
-date:   2025-06-23 21:00:00 +0200
-tags: Intune
+date:   2024-11-22 21:00:00 +0200
+tags: [Microsoft Tunnel, Intune, Linux, Red Hat, VPN]
 lang: fr
 description: >-
-  Guide pratique pour installer et configurer Microsoft Tunnel en mode rootless sur Red Hat. Étapes détaillées, prérequis, scripts et conseils pour une intégration réussie.
+  Découvrez comment Installer et Configurer Microsoft Tunnel en mode rootless sur Red Hat.
 ---
 
 # Introduction

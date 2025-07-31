@@ -3,7 +3,7 @@ layout: post
 title:  "Windows 365 monitoring with PowerShell"
 banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/w365-monitoring/1.jpg?raw=true"
 date:   2024-11-01 21:00:00 +0200
-tags: Windows 365
+tags: [Windows 365]
 keywords: w365, Windows 365, PowerShell, monitoring
 lang: en
 description: >-
