@@ -203,7 +203,7 @@ main {
 .post-title {
   margin: 0 0 0.2em 0;
   color: var(--primary);
-  font-size: 1.1em;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
   text-shadow: 0 1px 4px #0001;
@@ -309,7 +309,7 @@ main {
   text-align: center;
 }
 
-.post-title {
+.post-single .post-title {
   margin: 0 0 0.2em 0;
   color: var(--primary);
   font-size: 2em;
