@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Gérer qui a accès à un enregistrement de réunion, à une transcription, au récap IA..."
-banner : ""
+banner : "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/teams-copilot.jpeg?raw=true"
 date:   2024-05-27 21:00:00 +0200
 tags: [Teams, IA, Copilot, Sécurité]
 lang: fr
