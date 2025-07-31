@@ -70,6 +70,21 @@ layout: default
           {% endif %}
         </div>
         
+        <div class="post-comments">
+          <h3>💬 Commentaires et questions</h3>
+          <p>Vous avez une question sur cet article ? Vous avez trouvé une erreur ou souhaitez partager votre expérience ?</p>
+          <a href="https://github.com/ncheymol/ncheymol.github.io/issues/new?title=Question/Commentaire sur : {{ page.title | url_encode }}&body=## Article concerné%0A{{ page.url | absolute_url }}%0A%0A## Votre message%0A%0A<!-- Remplissez votre question ou commentaire ici -->%0A%0A---%0A*Généré automatiquement depuis l'article : {{ page.title }}*" 
+             target="_blank" 
+             rel="noopener" 
+             class="comment-link"
+             aria-label="Créer une issue GitHub pour cet article">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1.2em; height: 1.2em; margin-right: 0.5em; vertical-align: middle;">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            Créer une issue GitHub
+          </a>
+        </div>
+        
         <div class="post-navigation">
           {% if page.previous.url %}
             <a href="{{ page.previous.url }}" class="nav-link prev" aria-label="Article précédent : {{ page.previous.title }}">

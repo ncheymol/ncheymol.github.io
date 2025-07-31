@@ -603,6 +603,56 @@ code {
   transform: translateY(-2px);
 }
 
+/* ===== POST COMMENTS ===== */
+.post-comments {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--accent);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-light);
+}
+
+.post-comments h3 {
+  color: var(--primary);
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.post-comments p {
+  margin-bottom: 1rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.comment-link {
+  display: inline-flex;
+  align-items: center;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.8em 1.2em;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px #0002;
+}
+
+.comment-link:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px #0003;
+}
+
+.comment-link svg {
+  transition: var(--transition);
+}
+
+.comment-link:hover svg {
+  transform: scale(1.1);
+}
+
 /* ===== POST NAVIGATION ===== */
 .post-navigation {
   display: flex;
