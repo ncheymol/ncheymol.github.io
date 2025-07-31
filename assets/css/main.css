@@ -320,7 +320,7 @@ main {
   transition: var(--transition);
 }
 
-.post-date {
+.post-single .post-date {
   color: var(--text-light);
   font-size: 1em;
   margin-bottom: 1em;
