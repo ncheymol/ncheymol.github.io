@@ -147,9 +147,9 @@ main {
 .blog-list {
   max-width: 850px;
   margin: 0 auto;
-  padding: 0 0.3rem 1rem 0.3rem;
+  padding: 0 1rem 2rem 1rem;
   display: grid;
-  gap: 0.3rem;
+  gap: 1.5rem;
 }
 
 .post {
@@ -158,8 +158,8 @@ main {
   box-shadow: var(--shadow);
   display: flex;
   align-items: stretch;
-  gap: 0.2rem;
-  padding: 0.15rem 0.4rem;
+  gap: 0.6rem;
+  padding: 0.2rem 0.6rem;
   border: 1px solid var(--border);
   transition: var(--transition);
   position: relative;
@@ -174,9 +174,9 @@ main {
 }
 
 .post-img {
-  width: 140px;
+  width: 130px;
   min-width: 100px;
-  max-width: 180px;
+  max-width: 160px;
   object-fit: cover;
   border-radius: var(--border-radius);
   height: 100%;
@@ -196,22 +196,16 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
   min-width: 0;
-  padding: 0 0;
 }
 
-.post-content h2 {
-  margin: 0 !important;
-  padding: 0 !important;
-}
+
 
 .post-title {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0 0 0.2em 0;
   color: var(--primary);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
   text-shadow: 0 1px 4px #0001;
@@ -222,9 +216,6 @@ main {
   color: inherit;
   text-decoration: none;
   transition: var(--transition);
-  display: block;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
 .post-title a:hover {
@@ -235,14 +226,14 @@ main {
 .post-date {
   color: var(--text-light);
   font-size: 0.85em;
-  margin: 0 0 0.05em 0;
+  margin-bottom: 0.4em;
 }
 
 .post-desc {
-  margin-top: 0.02em;
-  font-size: 0.85em;
+  margin-top: 0.3em;
+  font-size: 0.95em;
   color: var(--text);
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 /* ===== SEARCH & FILTERS ===== */
@@ -336,7 +327,7 @@ main {
   margin-bottom: 1em;
 }
 
-.post-content {
+.post-single .post-content {
   font-size: 1.15em;
   color: var(--text);
   line-height: 1.7;
