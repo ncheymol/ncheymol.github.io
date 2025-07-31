@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <!-- SEO Meta Tags -->
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
@@ -48,11 +53,11 @@
     <meta name="apple-mobile-web-app-title" content="Nicolas CHEYMOL">
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="/assets/css/main.css" as="style">
-    <link rel="preload" href="/assets/js/main.js" as="script">
+    <link rel="preload" href="/assets/css/main.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}" as="style">
+    <link rel="preload" href="/assets/js/main.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}" as="script">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -104,6 +109,6 @@
     {{ content }}
     
     <!-- JavaScript -->
-    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/main.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}" defer></script>
 </body>
 </html>
