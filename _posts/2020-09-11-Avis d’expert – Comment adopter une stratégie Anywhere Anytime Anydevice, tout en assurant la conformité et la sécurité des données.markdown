@@ -2,7 +2,7 @@
 layout: post
 title: "Avis d’expert – Comment adopter une stratégie Anywhere Anytime Anydevice, tout en assurant la conformité et la sécurité des données"
 date:   2020-09-11 21:00:00 +0200
-tags: W365
+tags: [Windows 365]
 lang: fr
 description: >-
   Découvrez comment adopter une stratégie de mobilité et de sécurité des données sur tous les appareils, partout et à tout moment, tout en assurant la conformité réglementaire.
