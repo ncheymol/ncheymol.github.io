@@ -201,8 +201,14 @@ main {
   padding: 0 0;
 }
 
+.post-content h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .post-title {
   margin: 0 !important;
+  padding: 0 !important;
   color: var(--primary);
   font-size: 1.2rem;
   font-weight: 700;
@@ -215,6 +221,9 @@ main {
   color: inherit;
   text-decoration: none;
   transition: var(--transition);
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .post-title a:hover {
