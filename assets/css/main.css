@@ -343,6 +343,45 @@ main {
   box-shadow: var(--shadow);
 }
 
+/* ===== CONTENT LINKS ===== */
+.post-content a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: currentColor;
+}
+
+.post-content a:hover,
+.post-content a:focus-visible {
+  color: #005ea6;
+  text-decoration-color: currentColor;
+}
+
+.post-content a:visited {
+  color: #6a3dc1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .post-content a {
+    color: #69b3ff;
+    text-decoration-color: rgba(105, 179, 255, 0.7);
+  }
+
+  .post-content a:hover,
+  .post-content a:focus-visible {
+    color: #a7d1ff;
+    text-decoration-color: #a7d1ff;
+    outline: 2px solid rgba(105, 179, 255, 0.35);
+    outline-offset: 2px;
+  }
+
+  .post-content a:visited {
+    color: #b28dff;
+    text-decoration-color: rgba(178, 141, 255, 0.75);
+  }
+}
+
 /* ===== CODE BLOCKS ===== */
 pre, code {
   background: var(--accent);
