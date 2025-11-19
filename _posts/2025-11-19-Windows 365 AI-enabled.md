@@ -1,7 +1,7 @@
 ---
 title: "Windows 365 AI-enabled : Découverte et retour d'expérience"
 banner: "https://github.com/ncheymol/ncheymol.github.io/blob/main/_sources/W365-AI-enabled.jpeg?raw=true"
-date: 2025-11-20
+date: 2025-11-19
 tags: [Intune, Windows 365, AI, Ignite, IA]
 keywords: w365, Windows 365, AI-enabled, nouveautés, 2025, features, Ignite
 lang: fr
@@ -14,8 +14,6 @@ description: >-
 Microsoft vient d'annoncer Windows 365 AI-enabled. Venez découvrir ses fonctionnalités, mon retour d'expérience après 2 semaines d'utilisation et comment l'implémenter.
 
 Cette fonctionnalité est toujours en cours de développement, les interfaces sont sujettes à modification régulière et les fonctionnalités vont s'enrichir jusqu'à la disponibilité générale.
-
----
 
 ## Expérience utilisateur de Windows 365 AI-enabled Cloud PCs
 
