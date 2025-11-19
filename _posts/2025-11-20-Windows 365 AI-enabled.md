@@ -45,7 +45,7 @@ Le 3e changement, plus discret, sans lequel l'IA ne fonctionnerait pas, est l'in
 
 ![Message d'installation en cours](/_sources/W365-AI-enabled/Image5.png)
 
-## Click to Do
+### Click to Do
 
 Maintenant que tout est prêt, explorons les fonctionnalités qui amélioreront votre quotidien.
 
@@ -75,7 +75,7 @@ Microsoft a annoncé d'autres fonctionnalités comme l'édition d'images depuis 
 
 Pour les chanceux présents à San Francisco, allez participer au lab **Windows 365 AI Lab: Improved Windows Search & Click to Do in action**.
 
-## Recherche sémantique
+### Recherche sémantique
 
 Aujourd'hui, la fonctionnalité IA qui apporte une valeur claire, c'est l'amélioration substantielle de la recherche.
 
