@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="refresh" content="0; url=https://votresite.com/destination">
+    <title>Redirection...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+        p {
+            color: #666;
+            margin: 0;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Redirection en cours...</h1>
+        <p>Vous allez être redirigé(e) automatiquement.</p>
+        <p>Si ce n'est pas le cas, <a href="https://outlook.office.com/bookwithme/user/bf621cb6c8684cbaada390e38095fc4e@wakers.fr">cliquez ici</a>.</p>
+    </div>
+
+    <script>
+        // Redirection alternative avec JavaScript (en cas d'échec de la meta balise)
+        window.location.href = "https://outlook.office.com/bookwithme/user/bf621cb6c8684cbaada390e38095fc4e@wakers.fr";
+    </script>
+</body>
+</html>
